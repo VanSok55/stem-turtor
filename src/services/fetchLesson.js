@@ -1,6 +1,6 @@
 import { API_BASE_URI, AUTH_HEADER } from "./constants";
 export const fetchLesson = async (pageNum, pageSize) => {
-  const response = await fetch(`https://stem.automatex.dev/api/lessons/`, {
+  const response = await fetch(`${API_BASE_URI}lessons/`, {
     method: "GET",
     headers: {
       Authorization: AUTH_HEADER,
