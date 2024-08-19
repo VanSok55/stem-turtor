@@ -66,7 +66,7 @@ const BlogDetail = () => {
 
     try {
       const response = await fetch(
-        `http://136.228.158.126:50001/api/follow/${blog.author_id}/followers/`
+        `https://stem.automatex.dev/api/follow/${blog.author_id}/followers/`
       );
 
       if (!response.ok) {
@@ -102,8 +102,8 @@ const BlogDetail = () => {
       }
 
       const url = isFollowing
-        ? `http://136.228.158.126:50001/api/follows/${blog.author_id}/unfollow_user/`
-        : `http://136.228.158.126:50001/api/follows/${blog.author_id}/follow_user/`;
+        ? `https://stem.automatex.dev/api/follows/${blog.author_id}/unfollow_user/`
+        : `https://stem.automatex.dev/api/follows/${blog.author_id}/follow_user/`;
 
       const response = await fetch(url, {
         method: "POST",
