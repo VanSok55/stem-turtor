@@ -120,7 +120,7 @@ const BlogCard = () => {
         </Link>
       </section>
       <Link to="/blog">
-        <section className="grid grid-cols-1 h-auto sm:grid-cols-2 lg:grid-cols-4  xl:grid-cols-3 gap-4 w-[94%] mx-auto mb-5">
+        <section className="grid grid-cols-1 h-[430px] sm:grid-cols-2 lg:grid-cols-4 gap-4  w-[94%] mx-auto">
           <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]">
             <div className="relative h-full w-full overflow-hidden">
               <img
