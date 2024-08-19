@@ -301,6 +301,50 @@ const LessonCard = () => {
               </div>
             </div>
           </div>
+            {/* Card4 */}
+            <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+            <div className="relative h-[250px] overflow-hidden">
+              <img
+                className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
+                src={lesson4}
+                alt=""
+              />
+            </div>
+            <div className="p-3 mb-4">
+              <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+                The Science Activity
+              </h4>
+              <span className="h-[50px] block font-suwannaphum mt-2 text-l] antialiased font-normal leading-relaxed text-gray-700">
+                ក្មេងតូចៗនឹងក្លាយជាអ្នកវិទ្យាសាស្ត្រតូចៗ នៅពេលដែលពួកគេរុករក
+                ពិសោធន៍ បង្កើត និងបង្កើតផ្លូវរបស់ពួកគេ...
+              </span>
+            </div>
+
+            <div className="border-t">
+              <div className="flex items-center justify-between p-3 mt-1">
+                <p className="font-suwannaphum text-md text-black ">
+                  ចំនួនអ្នកមេីល: 27 នាក់
+                </p>
+                <div className="flex items-center text-[15px] ">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                     className="w-3 h-3 text-yellow-400 text-md"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </Link>
     </>
