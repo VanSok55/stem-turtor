@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaTelegram } from "react-icons/fa";
 import { Avatar } from "flowbite-react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
+import aboutUsContent from "../../../../../src/assets/AboutUs_content.jpg";
 AOS.init();
 const AllAboutUs = () => {
   return (
@@ -37,7 +37,7 @@ const AllAboutUs = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 " data-aos="fade-up" data-aos-duration="1500">
             <div className="img-box" >
               <img
-                src="../src/assets/Online-learning.gif"
+                src="../../../src/assets/Online-learning.gif"
                 alt="Online Learning"
                 className="w-auto h-[300px] sm:h-[400px]"
               />
@@ -79,7 +79,7 @@ const AllAboutUs = () => {
             </div>
             <div className="img-box ml-14"  data-aos="fade-up" data-aos-duration="1500">
               <img
-                src="../src/assets/Course app.gif"
+                src="../../../src/assets/Course app.gif"
                 alt="Purpose of STEM"
                 className="w-auto h-[300px] sm:h-[400px]"
               />
@@ -100,7 +100,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center" >
         <img
-          src="../src/assets/Mentor_MuyleangDevOps.jpg"
+          src="../../../src/assets/Mentor_MuyleangDevOps.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -134,7 +134,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
             <div className="flex justify-center items-center" >
               <img
-                  src="../src/assets/Mentor_Jessica1.jpg"
+                  src="../../../src/assets/Mentor_Jessica1.jpg"
                 alt="Mentor"
                 height={200}
                 className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -178,7 +178,7 @@ const AllAboutUs = () => {
         <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/cuteis.jpg"
+          src="../../../src/assets/cuteis.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -211,7 +211,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/channarith_offical.jpg"
+          src="../../../src/assets/channarith_offical.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -243,7 +243,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/sreyneang.jpg"
+          src="../../../src/assets/sreyneang.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -278,7 +278,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/Sokvan.jpg"
+          src="../../../src/assets/Sokvan.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -311,7 +311,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/kanika.jpg"
+          src="../../../src/assets/kanika.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -344,7 +344,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/ponleu.jpg"
+          src="../../../src/assets/ponleu.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -377,7 +377,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/mengeam.jpg"
+          src="../../../src/assets/mengeam.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -410,7 +410,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/Bunthi.jpg"
+          src="../../../src/assets/Bunthi.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -442,7 +442,7 @@ const AllAboutUs = () => {
           <div className="w-[300px] text-center py-4 px-6 bg-[#16A1DF] shadow-sm rounded-xl transform transition-all duration-300 hover:scale-105 hover:shadow-sm" data-aos="fade-up" data-aos-duration="1500">
       <div className="flex justify-center items-center">
         <img
-          src="../src/assets/Piseth_offical.jpg"
+          src="../../../src/assets/Piseth_offical.jpg"
           alt="Mentor"
           height={200}
           className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
