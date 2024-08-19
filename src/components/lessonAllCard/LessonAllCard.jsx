@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -20,7 +19,10 @@ const LessonAllCard = ({ lesson }) => {
         <img
           src={
             isValidUrl(lesson.lesson_image)
-              ? lesson.lesson_image
+              ? lesson.lesson_image.replace(
+                  /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                  "https://stem.automatex.dev/media/uploads/"
+                )
               : "https://blog.snappymob.com/wp-content/uploads/2020/12/8-Tips-for-Designing-Empty-Placeholder-Pages-Leni-Featured.png"
           }
           alt="Lesson Image"
