@@ -6,7 +6,7 @@ import { Viewer } from "@react-pdf-viewer/core";
 import book1 from "../../assets/book1.pdf";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-
+import bookdetail from "../../../src/assets/BookDetail-removebg-preview.png";
 // Import styles
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { AUTH_HEADER } from "../../services/constants";
@@ -164,7 +164,7 @@ const BookDetail = () => {
               <li key={index} className="flex items-center space-x-4">
                 <div className="w-[60px] h-[60px]">
                   <img
-                    src="../src/assets/BookDetail-removebg-preview.png"
+                    src={bookdetail}
                     alt="Related article image"
                     className="w-full h-full object-cover"
                   />
