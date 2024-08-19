@@ -1,5 +1,6 @@
 import React from "react";
 import { Footer } from "flowbite-react";
+import footer from "../../../src/assets/STEM_TOTUR.jpg";
 import {
   BsDribbble,
   BsFacebook,
@@ -15,7 +16,7 @@ const FooterCard = () => {
           <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
             <div>
             <Footer.Brand
-                src="../src/assets/STEM_TOTUR.jpg"
+                src={footer}
                 className="w-16 h-16 sm:w-7 sm:h-7 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-28 xl:h-28 rounded-full object-cover xl:-ml-5"
                 alt="Stem Logo"
               />

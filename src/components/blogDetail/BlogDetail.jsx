@@ -220,7 +220,7 @@ const BlogDetail = () => {
                 <li key={index} className="flex items-center space-x-4">
                   <div className="w-[80px] h-[80px] md:w-[60px] md:h-[60px] mt-3 cursor-pointer">
                     <img
-                      src={`${blog.image}`}
+                      src={blog.image}
                       alt="Related article image"
                       className="w-full h-full object-cover"
                     />
