@@ -3,7 +3,6 @@ import ForumContent from "../../components/forumContent/ForumContent";
 import FooterCard from "../../components/footer/FooterCard";
 import CardForum from "../../components/forumCardForm/CardForum";
 import Spinner from "../../components/appSpinner/Spinner";
-
 const Forum = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [forums, setForums] = useState([]);

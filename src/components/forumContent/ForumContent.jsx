@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import forumcontent from "../../../src/assets/forum_content.gif";
 const ForumContent = () => {
   const navigate = useNavigate();
   const [hasAccessToken, setHasAccessToken] = useState(false);
@@ -19,7 +19,8 @@ const ForumContent = () => {
         {/* Banner */}
         <div className="relative w-full bg-blue-600 rounded-lg overflow-hidden">
           <img
-            src="../src/assets/forum_content.gif"
+            src={forumcontent}
+
             alt="Cartoon"
             className="object-cover w-full h-full"
           />
