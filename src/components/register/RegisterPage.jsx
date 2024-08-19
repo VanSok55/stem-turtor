@@ -264,7 +264,7 @@ const RegisterPage = () => {
           </form>
           <img
             src={signup}
-            className="h-full w-full max-lg:mt-12 object-cover"
+            className="h-full w-full max-lg:mt-12 object-contain"
             autoPlay
             loop
             muted
