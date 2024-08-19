@@ -76,7 +76,7 @@ const BookDetail = () => {
                               <Viewer
                                 fileUrl={content.file.replace(
                                   /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
-                                  "https://stem.automatex.dev/"
+                                  "https://stem.automatex.dev/media/uploads/"
                                 )}
                                 plugins={[defaultLayoutPluginInstance]}
                               />
