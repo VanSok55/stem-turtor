@@ -81,7 +81,7 @@ const Create_Forum = () => {
           <div className="relative w-full bg-blue-600 rounded-lg overflow-hidden">
             <img
               src={forum}
-              alt="Cartoon"
+              alt="Create_forum"
               className="object-cover h-[500px]"
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
