@@ -8,7 +8,14 @@ import OnlineLearning from "../../../src/assets/Online-learning.gif";
 import course_app from "../../../src/assets/Course app.gif";
 import  muyleang from "../../../src/assets/Mentor_MuyleangDevOps.jpg";
 import jessi_ca from "../../../src/assets/Mentor_Jessica1.jpg";
-
+import pisal from "../../../src/assets/cuteis.jpg";
+import narith from "../../../src/assets/channarith_offical.jpg";
+import sreyneang from "../../../src/assets/sreyneang.jpg";
+import kanika from "../../../src/assets/kanika.jpg";
+import ponleu from "../../../src/assets/ponleu.jpg";
+import mengeam from "../../../src/assets/mengeam.jpg";
+import bunthi from "../../../src/assets/Bunthi.jpg";
+import piseth from "../../../src/assets/Piseth_offical.jpg";
 
 AOS.init();
 const AllAboutUs = () => {
@@ -252,7 +259,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/cuteis.jpg"
+                src={pisal}
                 alt="Mentor"
                 height={200}
                 className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -308,7 +315,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/channarith_offical.jpg"
+                src={narith}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -363,7 +370,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/sreyneang.jpg"
+                src={sreyneang}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -419,7 +426,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/Sokvan.jpg"
+                src={sokvan}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -475,7 +482,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/kanika.jpg"
+                src={kanika}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -531,7 +538,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/ponleu.jpg"
+                src={ponleu}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -587,7 +594,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/mengeam.jpg"
+                src={mengeam}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -643,7 +650,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/Bunthi.jpg"
+                src={bunthi}
                 alt="Mentor"
                 height={200}
                 className="mb-4 object-cover rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -698,7 +705,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/Piseth_offical.jpg"
+                src={piseth}
                 alt="Mentor"
                 height={200}
                 className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"

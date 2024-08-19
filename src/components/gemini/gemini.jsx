@@ -3,6 +3,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Card, TextInput, Button, Dropdown, Modal, Spinner, Textarea } from 'flowbite-react';
 import { HiOutlinePaperAirplane, HiX } from 'react-icons/hi'; // Import HiX for the close icon
 import "../../App.css";
+import gemini from "../../../src/assets/STEM_LOGO_TUTOR.png";
 // GeminiChat Component
 function GeminiChat({ language, handleLanguageChange, onClose }) {
   const [messages, setMessages] = useState([
@@ -41,14 +42,12 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
     if (prompt.trim() !== '') {
       setMessages([...messages, { sender: 'user', text: prompt }]);
       setLoading(true);
-
       try {
         const gemini = new GoogleGenerativeAI('AIzaSyD_h8SRy54jyYXns4btKTdFAiHfuMcxb88');
         const model = gemini.getGenerativeModel({ model: 'gemini-1.5-flash' });
         const result = await model.generateContent(prompt, { language });
         const response = await result.response;
         const text = await response.text();
-
         setMessages((prevMessages) => [
           ...prevMessages,
           { sender: 'bot', text: '' },
@@ -83,7 +82,7 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
           </h2>
           <img
             className="w-[80px] h-[50px] md:w-[100px] md:h-[60px] object-cover"
-            src="../src/assets/STEM_LOGO_TUTOR.png"
+            src={gemini}
             alt="STEM Logo"
           />
           <section className="bg-blue-500 text-white p-[4px] rounded-md font-suwannaphum">
@@ -191,7 +190,7 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
         {/* Messages */}
         <img
           className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] object-cover rounded-full"
-          src="../src/assets/STEM_LOGO_TUTOR.png"
+          src={dashboard}
           alt="STEM Logo"
         />
         <div className="overflow-auto h-96 p-2">
@@ -236,14 +235,12 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
     </>
   );
 }
-
 // App Component
 function App() {
   const [showChat, setShowChat] = useState(false);
   const [language, setLanguage] = useState('EN');
   const [imagePosition, setImagePosition] = useState({ x: 50, y: 50 });
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-
   const handleDragStart = (e) => {
     setDragStart({ x: e.clientX, y: e.clientY });
     e.dataTransfer.setData('text/plain', '');
