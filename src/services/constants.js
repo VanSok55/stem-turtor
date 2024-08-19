@@ -5,5 +5,6 @@ export const AUTH_HEADER = {
 };
 
 // Use the AUTH_HEADER to make authenticated requests
-export const API_BASE_URI = "http://136.228.158.126:50001/api/";
+// export const API_BASE_URI = "http://136.228.158.126:50001/api/";
+export const API_BASE_URI = "https://stem.automatex.dev/api/";
 
