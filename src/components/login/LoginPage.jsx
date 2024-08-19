@@ -8,6 +8,8 @@ import Swal from "sweetalert2";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import Profile from "../../Profile";
+import login_page from "../../../src/assets/STEM_TOTUR.jpg";
+import logo_login from "../../../src/assets/Tablet login.gif"
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -168,7 +170,7 @@ const LoginPage = () => {
                       </Link>
                     </p>
                     <section className="w-20 h-20 mx-auto rounded-full mt-4 overflow-hidden">
-                      <img src="../src/assets/STEM_TOTUR.jpg" alt="STEM Tutorial" className="w-full h-full object-cover" />
+                      <img src={login_page} alt="STEM Tutorial" className="w-full h-full object-cover" />
                     </section>
 
                   </div>
@@ -254,7 +256,7 @@ const LoginPage = () => {
               <div>
                 <img
                   className="w-full max-h-[600px] object-cover"
-                  src="../src/assets/Tablet login.gif"
+                  src={logo_login}
                   alt="login"
                 />
               </div>

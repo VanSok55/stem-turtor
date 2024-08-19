@@ -17,7 +17,7 @@ const Otp = () => {
 
     try {
       const response = await axios.post(
-        "http://136.228.158.126:50001/api/verify-otp/",
+        "https://stem.automatex.dev/api/verify-otp/",
         formData
       );
       if (response.status === 200) {
