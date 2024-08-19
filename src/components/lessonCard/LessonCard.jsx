@@ -262,7 +262,7 @@ const LessonCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={lesson4}
+                src={lesson3}
                 alt=""
               />
             </div>
