@@ -162,7 +162,7 @@ const BlogDetail = () => {
             <div>
               <img
                 className="w-full object-cover rounded-lg"
-                src={$`{blog.image}`}
+                src={blog.image}
                 alt={blog.title}
               />
             </div>
