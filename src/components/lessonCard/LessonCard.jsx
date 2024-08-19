@@ -3,6 +3,8 @@ import { FaChevronRight, FaChevronLeft, FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import image1 from "../../../src/assets/Theory and Practice.jpg";
+import lesson1 from "../../../src/assets/Lesson.webp";
 AOS.init();
 
 const LessonCard = () => {
@@ -11,7 +13,7 @@ const LessonCard = () => {
 
   const lessons = [
     {
-      imgSrc: "../src/assets/Theory and Practice.jpg",
+      imgSrc: image1 ,
       title: "គណិតវិទ្យា ទ្រឹស្តី​ និង​ ការអនុវត្តន៏​",
       description:
         "គណិតវិទ្យាត្រូវបានប្រើដើម្បីដោះស្រាយបញ្ហាក្នុងពិភពពិតក្នុងវិស័យដូចជា ហិរញ្ញវត្ថុ វិស្វកម្ម វិទ្យាសាស្ត្រ...",
@@ -181,7 +183,7 @@ const LessonCard = () => {
             <div className="relative h-full w-full overflow-hidden">
               <img
                 className="h-full w-full object-cover opacity-100 transition duration-300 ease-in-out transform scale-100 rounded-t-lg "
-                src="../src/assets/Lesson.webp"
+                src={lesson1}
                 alt="Stem Book"
               />
               <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
