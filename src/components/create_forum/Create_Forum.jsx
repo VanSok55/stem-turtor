@@ -5,7 +5,7 @@ import { API_BASE_URI } from "../../services/constants";
 import Swal from "sweetalert2"; // Import SweetAlert2
 import DOMPurify from "dompurify";
 import TextEditor from "../texteditor/TextEditor";
-
+import forum from "../../../src/assets/Discussion.gif";
 const Create_Forum = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -80,7 +80,7 @@ const Create_Forum = () => {
         <div className="bg-white shadow rounded-lg p-6">
           <div className="relative w-full bg-blue-600 rounded-lg overflow-hidden">
             <img
-              src="../src/assets/Discussion.gif"
+              src={forum}
               alt="Cartoon"
               className="object-cover h-[500px]"
             />
