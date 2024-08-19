@@ -3,12 +3,13 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Card, TextInput, Button, Dropdown, Modal, Spinner, Textarea } from 'flowbite-react';
 import { HiOutlinePaperAirplane, HiX } from 'react-icons/hi'; // Import HiX for the close icon
 import "../../App.css";
-
+// GeminiChat Component
 function GeminiChat({ language, handleLanguageChange, onClose }) {
   const [messages, setMessages] = useState([
     { sender: 'bot', text: 'Welcome to STEM Online! How can I assist you today?' },
     { sender: 'bot', text: 'Feel free to ask any questions related to STEM topics.' },
   ]);
+
   const [prompt, setPrompt] = useState('');
   const [loading, setLoading] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
@@ -36,9 +37,11 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
 
   const handleSend = async (event) => {
     event.preventDefault();
+
     if (prompt.trim() !== '') {
       setMessages([...messages, { sender: 'user', text: prompt }]);
       setLoading(true);
+
       try {
         const gemini = new GoogleGenerativeAI('AIzaSyD_h8SRy54jyYXns4btKTdFAiHfuMcxb88');
         const model = gemini.getGenerativeModel({ model: 'gemini-1.5-flash' });
@@ -59,7 +62,6 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
       }
     }
   };
-
   useEffect(() => {
     return () => {
       if (typingRef.current) {
@@ -70,29 +72,114 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
 
   return (
     <>
-      <header className="bg-[#16A1DF] font-suwannaphum rounded-lg p-4 md:p-5 m-5 md:m-7">
+      <header className="bg-[#16A1DF] font-suwannaphum rounded-lg p-5 m-7">
         <div>
-          <h1 className="font-suwannaphum text-xl md:text-2xl xl:text-3xl text-center text-white">Welcome chat with STEM</h1>
+          <h1 className="font-suwannaphum text-[25px] text-center text-white">Welcome chat with STEM</h1>
         </div>
         <div className="flex justify-between items-center">
-          <h2 className="text-sm md:text-md xl:text-lg font-semibold text-white mt-2">
+          <h2 className="text-md text-[20px] font-semibold text-white mt-2">
             STEM <br />
-            <p className="text-xs md:text-sm xl:text-base font-normal">Online</p>
+            <p className="text-[15px] font-normal">Online</p>
           </h2>
           <img
-            className="w-20 h-12 md:w-24 md:h-14 xl:w-28 xl:h-16 object-cover"
+            className="w-[80px] h-[50px] md:w-[100px] md:h-[60px] object-cover"
             src="../src/assets/STEM_LOGO_TUTOR.png"
             alt="STEM Logo"
           />
-          <section className="bg-blue-500 text-white p-2 rounded-md font-suwannaphum">
+          <section className="bg-blue-500 text-white p-[4px] rounded-md font-suwannaphum">
             <Dropdown label={language} inline={true}>
-              {/* Your Dropdown Items */}
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('EN')}
+              >
+                ENGLISH
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('KH')}
+              >
+                KHMER
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('EE')}
+              >
+                Eesti
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('IT')}
+              >
+                Italiano
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('FR')}
+              >
+                Francais
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('FI')}
+              >
+                Suoml
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('DE')}
+              >
+                Deutsch
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('ES')}
+              >
+                Español
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('JA')}
+              >
+                日本語 (Japanese)
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('ZH')}
+              >
+                中文 (Chinese)
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('RU')}
+              >
+                Русский (Russian)
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('AR')}
+              >
+                العربية (Arabic)
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('PT')}
+              >
+                Português (Portuguese)
+              </Dropdown.Item>
+              <Dropdown.Item
+                className="hover:bg-slate-300 active:bg-slate-400"
+                onClick={() => handleLanguageChange('HI')}
+              >
+                हिन्दी (Hindi)
+              </Dropdown.Item>
             </Dropdown>
           </section>
+
         </div>
       </header>
 
-      <Card className="relative w-[95%] md:w-[90%] xl:w-[85%] 2xl:w-[80%] max-w-3xl mx-auto shadow-lg rounded-lg border-gray-300 bg-white font-suwannaphum mb-10">
+      <Card className="relative w-[90%] h-auto max-w-3xl mx-auto shadow-lg rounded-lg border-gray-300 bg-white font-suwannaphum mb-10">
+        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
@@ -100,19 +187,21 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
         >
           <HiX size={24} />
         </button>
+        
+        {/* Messages */}
         <img
           className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] object-cover rounded-full"
           src="../src/assets/STEM_LOGO_TUTOR.png"
           alt="STEM Logo"
         />
-        <div className="overflow-auto h-60 md:h-80 xl:h-96 p-2">
+        <div className="overflow-auto h-96 p-2">
           {messages.map((message, index) => (
             <div key={index} className={`flex ${message.sender === 'bot' ? 'justify-start' : 'justify-end'} mb-2`}>
               <div
-                className={`p-3 rounded-lg text-sm md:text-base max-w-xs md:max-w-md ${
+                className={`p-3 rounded-lg text-sm max-w-xs ${
                   message.sender === 'bot'
-                    ? 'bg-gray-100 text-gray-800 border border-gray-300 p-2'
-                    : 'bg-blue-200 text-gray-800 border border-gray-500 p-2 mr-4'
+                    ? 'bg-gray-100 text-gray-800 border border-gray-300 p-2' // Bot message with border
+                    : 'bg-blue-200 text-gray-800 border border-gray-500 p-2 mr-4' // User message with border
                 }`}
                 style={{ textIndent: message.sender !== 'bot' ? '0' : '0', whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}
               >
@@ -129,6 +218,7 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
           )}
         </div>
 
+        {/* Input */}
         <form onSubmit={handleSend} className="mt-4 flex items-center space-x-2">
           <Textarea
             type="text"
@@ -136,9 +226,9 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
             onChange={(e) => setPrompt(e.target.value)}
             placeholder="Type your message here..."
             disabled={loading}
-            className="font-suwannaphum w-full h-10 md:h-12 xl:h-14"
+            className="font-suwannaphum"
           />
-          <Button type="submit" className="w-12 h-12 md:w-14 md:h-14 xl:w-16 xl:h-16 bg-[#16A1DF]" disabled={loading}>
+          <Button type="submit" className="w-14 h-14 bg-[#16A1DF]" disabled={loading}>
             {loading ? <Spinner size="lg" /> : <HiOutlinePaperAirplane size={27} />}
           </Button>
         </form>
@@ -147,6 +237,7 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
   );
 }
 
+// App Component
 function App() {
   const [showChat, setShowChat] = useState(false);
   const [language, setLanguage] = useState('EN');
@@ -173,9 +264,9 @@ function App() {
   };
 
   return (
-    <div className="p-4 md:p-6 xl:p-8" style={{ position: 'relative' }}>
+    <div className="p-4" style={{ position: 'relative' }}>
       <section
-        className="w-20 h-20 md:w-24 md:h-24 xl:w-28 xl:h-28 cursor-pointer absolute"
+        className="w-20 h-20 cursor-pointer absolute"
         style={{ left: `${imagePosition.x}px`, top: `${imagePosition.y}px` }}
         draggable
         onDragStart={handleDragStart}
@@ -190,14 +281,8 @@ function App() {
       </section>
 
       <section>
-        <Modal show={showChat} onClose={() => setShowChat(false)} size="xl">
-          <Modal.Body>
-            <GeminiChat
-              language={language}
-              handleLanguageChange={handleLanguageChange}
-              onClose={() => setShowChat(false)}
-            />
-          </Modal.Body>
+        <Modal show={showChat} onClose={() => setShowChat(false)} size="lg">
+          <GeminiChat language={language} handleLanguageChange={handleLanguageChange} onClose={() => setShowChat(false)} />
         </Modal>
       </section>
     </div>
