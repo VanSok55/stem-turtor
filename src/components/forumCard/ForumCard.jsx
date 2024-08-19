@@ -4,62 +4,74 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import image1 from "../../../src/assets/Science in the city​ E.jpg";
+import image2 from "../../../src/assets/A Framework for K-12.jpg";
+import image3 from "../../../src/assets/Designing with Photoshop.jpg";
+import image4 from "../../../src/assets/Creative with Photoshop.jpg"
+import image5 from "../../../src/assets/Open middle math E.jpg";
+import image6 from "../../../src/assets/Learning STEM.jpg";
+import image7 from "../../../src/assets/Video Production.jpg";
+import image8 from "../../../src/assets/Creating Compelling Video E.jpg";
+import forumcard1 from "../../../src/assets/Forum Part.jpg";
+import forumcard2 from "../../../src/assets/chamistry of products.jpg";
+import forumcard3 from "../../../src/assets/From Batch to Stream.jpg";
+import forumcard4 from "../../../src/assets/Machine Learning.jpg";
 AOS.init();
 const ForumCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage = 4; // Number of items to show per slide
   const forums = [
     {
-      imgSrc: "../src/assets/Science in the city​ E.jpg",
+      imgSrc: image1 ,
       title: "Science in the City",
       description:
         "សៀវភៅនេះភ្ជាប់ការរុករកនៃការស្រាវជ្រាវសហសម័យស្តីពីការបង្រៀនវិទ្យាសាស្ត្រទៅនឹងវិធីសាស្រ្តបង្រៀន...",
       views: 44,
     },
     {
-      imgSrc: "../src/assets/A Framework for K-12.jpg",
+      imgSrc: image2 ,
       title: "Framework for K-12",
       description:
         "វិទ្យាសាស្ត្រ វិស្វកម្ម និងបច្ចេកវិជ្ជា ជាគន្លឹះក្នុងការដោះស្រាយបញ្ហាប្រឈមសំខាន់ៗជាច្រើននាពេលបច្ចុប្បន្ន...",
       views: 10,
     },
     {
-      imgSrc: "../src/assets/Designing with Photoshop.jpg",
+      imgSrc: image3,
       title: "Designing with Photoshop",
       description:
         "Photoshop សម្រាប់ការរចនាក្រាហ្វិក រួមទាំងការបង្កើតរូបភាពដ៏អស្ចារ្យ និងក្រាហ្វិកប្រកបដោយប្រសិទ្ធ...",
       views: 24,
     },
     {
-      imgSrc: "../src/assets/Creative with Photoshop.jpg",
+      imgSrc: image4 ,
       title: "Creative with Photoshop",
       description:
         "Tips and Techniques:ស្វែងយល់ពីបច្ចេកទេសសម្រាប់ការរៀបចំរូបភាពប្រកបដោយភាពច្នៃប្រឌិត...",
       views: 63,
     },
     {
-      imgSrc: "../src/assets/Open middle math E.jpg",
+      imgSrc: image5 ,
       title: "Open Middle Math",
       description:
         "សៀវភៅនេះសម្រាប់គ្រូក្នុងការជួយសិស្សឱ្យអភិវឌ្ឍទាំងភាពស្ទាត់ជំនាញ ការបង្កើតបញ្ហាគណិតវិទ្យា Open...",
       views: 67,
     },
     {
-      imgSrc: "../src/assets/Learning STEM.jpg",
+      imgSrc: image6,
       title: "Learning STEM",
       description:
         "ការរៀន STEM ផ្តោតលើការរៀនដែលមានតែមួយគត់ចំពោះការបង្រៀនវិទ្យាសាស្ត្រ បច្ចេកវិទ្យា វិស្វកម្ម និ...",
       views: 100,
     },
     {
-      imgSrc: "../src/assets/Video Production.jpg",
+      imgSrc: image7,
       title: "Video Production",
       description:
         "ស្វែងយល់ពីរបៀបបង្កើតគំនិតគួរឱ្យទាក់ទាញ រៀបចំផែនការថតរបស់អ្នក និងអនុវត្តការថតដោយយកចិត្ត...",
       views: 94,
     },
     {
-      imgSrc: "../src/assets/Creating Compelling Video E.jpg",
+      imgSrc: image8,
       title: "Creating Compelling Video ",
       description:
         "ស្វែងយល់ពីរបៀបបង្កើតរឿងគួរឱ្យទាក់ទាញអារម្មណ៍ រៀបចំផែនការធាតុរូបភាព សំឡេង និងប្រើប្រាស់ឧប...",
@@ -106,7 +118,7 @@ const ForumCard = () => {
             <div className="relative h-full w-full overflow-hidden">
               <img
                 className="h-full w-full rounded-md object-cover opacity-100 transition duration-300 ease-in-out transform scale-100"
-                src="../src/assets/Forum Part.jpg"
+                src={forumcard1}
                 alt="Stem Book"
               />
               <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
@@ -126,7 +138,7 @@ const ForumCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/chamistry of products.jpg"
+                src={forumcard2}
                 alt=""
               />
             </div>
@@ -170,7 +182,7 @@ const ForumCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/From Batch to Stream.jpg"
+                src={forumcard3}
                 alt=""
               />
             </div>
@@ -214,7 +226,7 @@ const ForumCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/Machine Learning.jpg"
+                src={forumcard4}
                 alt=""
               />
             </div>

@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { SlUserFollow } from "react-icons/sl";
 import moment from "moment";
 import "./styleBlog.css";
-
 const BlogDetail = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
@@ -154,109 +153,103 @@ const BlogDetail = () => {
   }
 
   return (
-    <section className="w-[100%] mx-auto flex flex-col md:flex-row justify-between gap-8 p-8 font-suwannaphum">
-      <div className="w-full h-full">
-        <h1
-          className="text-2xl font-bold mb-4"
-          dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}
-        ></h1>
-        <p
-          className="mb-4 text-[18px]"
-          dangerouslySetInnerHTML={{ __html: blog.content || "No content" }}
-        ></p>
-        <div className="w-[60%] mx-auto flex justify-center">
-          <div>
-            <img
-              className="w-full object-cover rounded-lg"
-              src={blog.image}
-              alt={blog.title}
-            />
+    <>
+      <section className="w-[100%] mx-auto flex flex-col md:flex-row justify-between gap-8 p-8 font-suwannaphum ">
+        <div className="w-full h-full">
+          <h1 className="text-2xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}></h1>
+          <p className="mb-4 text-[18px]" dangerouslySetInnerHTML={{ __html: blog.content || "No title" }} ></p>
+          <div className="w-[60%] mx-auto flex justify-center">
+            <div>
+              <img
+                className="w-full object-cover rounded-lg"
+                src={$`{blog.image}`}
+                alt={blog.title}
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="w-full md:w-[35%] flex flex-col gap-8">
-        {/* Profile Section */}
-        <div className="w-full py-4 px-3 bg-gray-200 rounded-lg shadow-lg flex flex-col items-center">
-          <img
-            src={
-              blog.profileUser ||
-              "https://mastertondental.co.nz/wp-content/uploads/2022/12/team-profile-placeholder.jpg"
-            }
-            alt="Profile Image"
-            className="w-16 h-16 md:w-12 md:h-12 rounded-full"
-          />
-          <div className="ml-3 flex flex-col items-center text-center">
-            <div className="font-bold text-base md:text-sm mt-2">{`${blog.author}`}</div>
-            <div className="text-gray-400 text-sm md:text-xs mt-2">
-              @{blog.author}
+        <div className="w-full md:w-[35%] flex flex-col gap-8">
+          {/* Profile Section */}
+          <div className="w-full py-4 px-3 bg-gray-200 rounded-lg shadow-lg flex flex-col items-center">
+            <img
+              src={
+                blog.profileUser ||
+                "https://mastertondental.co.nz/wp-content/uploads/2022/12/team-profile-placeholder.jpg"
+              }
+              alt="Profile Image"
+              className="w-16 h-16 md:w-12 md:h-12 rounded-full"
+            />
+            <div className="ml-3 flex flex-col items-center text-center">
+              <div className="font-bold text-base md:text-sm mt-2">{`${blog.author}`}</div>
+              <div className="text-gray-400 text-sm md:text-xs mt-2">
+                @{blog.author}
+              </div>
+              <span className="mt-2">
+                {error && <p>Error: {error}</p>}
+                {totalFollowers !== null && !loading && !error && (
+                  <p className="text-sm md:text-base">
+                    ចំនួនតាម : {totalFollowers}
+                  </p>
+                )}
+              </span>
             </div>
-            <span className="mt-2">
-              {error && <p>Error: {error}</p>}
-              {totalFollowers !== null && !loading && !error && (
-                <p className="text-sm md:text-base">ចំនួនតាម : {totalFollowers}</p>
-              )}
+
+            <div
+              className={`flex items-center text-white space-x-2 py-2 px-4 md:px-8 lg:px-12 xl:px-16 rounded-xl cursor-pointer transition-all duration-300 mt-4 ${
+                isFollowing
+                  ? "bg-gray-400"
+                  : "bg-[#16a1df] hover:bg-[#246a8b] transform hover:scale-105"
+              }`}
+              onClick={handleFollowToggle}
+            >
+              <SlUserFollow className="text-base md:text-sm" />
+              <button className="text-sm md:text-base lg:text-lg">
+                {isFollowing ? "ឈប់តាម" : "តាមដាន"}
+              </button>
+            </div>
+          </div>
+
+          {/* Related Articles Section */}
+          <div className="w-full p-4 bg-gray-200 rounded-lg">
+            <ul>
+              <li className="font-bold text-lg md:text-base mb-4">
+                អត្ថបទដែលពាក់ព័ន្ធ
+              </li>
+              {[...Array(4)].map((_, index) => (
+                <li key={index} className="flex items-center space-x-4">
+                  <div className="w-[80px] h-[80px] md:w-[60px] md:h-[60px] mt-3 cursor-pointer">
+                    <img
+                      src={`${blog.image}`}
+                      alt="Related article image"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div>
+                    <p className="block title-truncate text-sm md:text-base" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}>
+                    </p>
+                    <div className="text-sm md:text-[14px]">
+                      បង្កើត: {moment(blog.created_at).format("MMMM D, YYYY")}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Keywords Section */}
+          <div className="w-full p-4 bg-gray-200 rounded-lg shadow-md items-center gap-2 font-suwannaphum">
+            <h6 className="text-gray-800 font-semibold text-lg md:text-base mb-2">
+              ពាក្យគន្លឹះ:
+            </h6>
+            <span className="mt-2 px-4 py-2 text-sm md:text-xs bg-gray-100 rounded-full text-gray-700 cursor-pointer hover:bg-blue-500 hover:text-white">
+              មិនទាន់មានពាក្យគន្លឹះទេ
             </span>
           </div>
-
-          <div
-            className={`flex items-center text-white space-x-2 py-2 px-4 md:px-8 lg:px-12 xl:px-16 rounded-xl cursor-pointer transition-all duration-300 mt-4 ${
-              isFollowing
-                ? "bg-gray-400"
-                : "bg-[#16a1df] hover:bg-[#246a8b] transform hover:scale-105"
-            }`}
-            onClick={handleFollowToggle}
-          >
-            <SlUserFollow className="text-base md:text-sm" />
-            <button className="text-sm md:text-base lg:text-lg">
-              {isFollowing ? "ឈប់តាម" : "តាមដាន"}
-            </button>
-          </div>
         </div>
-
-        {/* Related Articles Section */}
-        <div className="w-full p-4 bg-gray-200 rounded-lg">
-          <ul>
-            <li className="font-bold text-lg md:text-base mb-4">
-              អត្ថបទដែលពាក់ព័ន្ធ
-            </li>
-            {[...Array(4)].map((_, index) => (
-              <li key={index} className="flex items-center space-x-4">
-                <div className="w-[80px] h-[80px] md:w-[60px] md:h-[60px] mt-3 cursor-pointer">
-                  <img
-                    src={`${blog.image}`}
-                    alt="Related article image"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div>
-                  <p
-                    className="block title-truncate text-sm md:text-base"
-                    dangerouslySetInnerHTML={{
-                      __html: blog.title || "No title",
-                    }}
-                  ></p>
-                  <div className="text-sm md:text-[14px]">
-                    បង្កើត: {moment(blog.created_at).format("MMMM D, YYYY")}
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Keywords Section */}
-        <div className="w-full p-4 bg-gray-200 rounded-lg shadow-md items-center gap-2 font-suwannaphum">
-          <h6 className="text-gray-800 font-semibold text-lg md:text-base mb-2">
-            ពាក្យគន្លឹះ:
-          </h6>
-          <span className="text-base md:text-[14px]">
-            {blog.keywords || "No keywords"}
-          </span>
-        </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
