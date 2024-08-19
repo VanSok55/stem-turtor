@@ -247,10 +247,9 @@ const BlogDetail = () => {
 
 
                   <div>
-                    <p className="block title-truncate text-sm md:text-xs">
-                      {blog.title || "No related title"}
+                    <p className="block title-truncate text-sm md:text-xs" dangerouslySetInnerHTML={{ __html: blog.title || "No related title" }}> 
                     </p>
-                    <p className="text-gray-500 text-sm md:text-xs mt-2">
+                    <p className="text-gray-500 text-sm md:text-xs mt-2" >
                       {moment(blog.created_at).format("MMMM DD, YYYY")}
                     </p>
                   </div>

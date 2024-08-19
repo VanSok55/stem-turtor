@@ -117,11 +117,19 @@ const NavbarComponent = () => {
               inline
               label={
                 <Avatar
-                  alt="User settings"
-                  img={profile.image}
-                  rounded
-                  className="sm:w-10 sm:h-10 md:w-10  md:h-10  xl:w-[80px] xl:h-[70px] 2xl:w-2.5rem 2xl:h-2.5rem "
-                />
+                alt="User settings"
+                img={
+                  profile.image
+                    ? profile.image.replace(
+                        /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                        "https://stem.automatex.dev/media/uploads/"
+                      )
+                    : "https://via.placeholder.com/150"
+                }
+                rounded
+                className="sm:w-10 sm:h-10 md:w-10 md:h-10 xl:w-[80px] xl:h-[70px] 2xl:w-2.5rem 2xl:h-2.5rem"
+              />
+              
               }
             >
               <Dropdown.Header className="font-suwannaphum text-sm sm:text-md">
