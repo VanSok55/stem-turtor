@@ -24,56 +24,56 @@ const BookCard = () => {
 
   const books = [
     {
-      imgSrc: {image1},
+      imgSrc: image1,
       title: "ការសិក្សាទាក់ទងទៅនិង STEM",
       description:
         "ស្វែងរកសៀវភៅផ្សេងៗដែលទាក់ទងទៅនឹង Technology ជាពិសេសមានសៀវភៅដែលបង្ហាញ... ",
       views: 44,
     },
     {
-      imgSrc: {image2},
+      imgSrc: image2,
       title: " STEM sister Cambodia",
       description:
         "បទសម្ភាសន៍អ្នកនាង អេង ឡេងស៊ា អំពីចំណាប់អារម្មណ៍ និងបទពិសោធន៍៖ អ្នកនាងមានចំណាប់...",
       views: 10,
     },
     {
-      imgSrc: {image3},
+      imgSrc: image3,
       title: " ការអនុវត្តកម្មវិធីអប់រំបង្កើតហ្គេម",
       description:
         "ការអនុវត្តកម្មវិធីអប់រំបង្កើតហ្គេមនៅអនុវិទ្យាល័យ កែវពណ៌ ខេត្តសៀមរាប៖កម្មវិធីនេះមានគោលបំណង...",
       views: 24,
     },
     {
-      imgSrc: {image4},
+      imgSrc: image4,
       title: " Exploring STEM Innovations",
       description:
         "This book is designed to facilitate the study of STEM concepts by providing...",
       views: 63,
     },
     {
-      imgSrc: {image5},
+      imgSrc: image5,
       title: "GIMP Master Class",
       description:
         "GIMP ជាកម្មវិធីកុំព្យូទ័រ ប្រភេទ Open Source សម្រាប់ការកែសម្រួលរូបភាព និងការបង្កើតក្រាហ្វិក...",
       views: 67,
     },
     {
-      imgSrc: {image6},
+      imgSrc: image6,
       title: "OBS Studio",
       description:
         "OBS Studio គឺជាកម្មវិធីសម្រាប់ថត និងផ្សាយផ្ទាល់។ វាអាចប្រើបានទាំង Windows, macOS, Linux...",
       views: 100,
     },
     {
-      imgSrc: {image7},
+      imgSrc: image7,
       title: "Virtual Private Netword",
       description:
         "បណ្តាញឯកជននិម្មិត ឬ VPN គឺជាការតភ្ជាប់ដែលបានអ៊ិនគ្រីបតាមអ៊ីនធឺណិតពីពីឧបករណ៍របស់អ្នកទៅ...",
       views: 94,
     },
     {
-      imgSrc: {image8},
+      imgSrc: image8,
       title: "រចនារូបភាពនៅលើកម្មវិធី Canva",
       description:
         "Canva គឺជាវេទិការចនាក្រាហ្វិចពហុជាតិជាសកលរបស់អូស្ត្រាលី ដែលត្រូវបានប្រើប្រាស់សម្រាប់ការ...",
