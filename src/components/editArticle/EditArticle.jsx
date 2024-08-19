@@ -21,7 +21,7 @@ const EditArticle = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `http://136.228.158.126:50001/api/articles/${id}/`,
+          `https://stem.automatex.dev/api/articles/${id}/`,
           {
             headers: {
               Authorization: `Bearer ${accessToken}`,

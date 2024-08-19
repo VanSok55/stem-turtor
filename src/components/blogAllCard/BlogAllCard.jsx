@@ -15,7 +15,7 @@ const BlogAllCard = ({ blog }) => {
 
     try {
       const response = await fetch(
-        `http://136.228.158.126:50001/api/follow/${blog.author_id}/followers/`
+        `https://stem.automatex.dev/api/follow/${blog.author_id}/followers/`
       );
 
       if (!response.ok) {
@@ -75,9 +75,7 @@ const BlogAllCard = ({ blog }) => {
                 />
               </a>
               <div className="flex flex-col">
-                <span
-                  className="ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 rounded m-2 text-gray-600 font-semibold hover:text-indigo-600 font-suwannaphum text-[14px] sm:text-[16px] md:text-[18px]"
-                >
+                <span className="ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 rounded m-2 text-gray-600 font-semibold hover:text-indigo-600 font-suwannaphum text-[14px] sm:text-[16px] md:text-[18px]">
                   {blog.author}
                 </span>
                 <p className="text-gray-600 font-suwannaphum text-[12px] sm:text-[14px] md:text-[16px] ml-3 sm:ml-4 md:ml-5 lg:ml-4 xl:ml-7 -mt-1">

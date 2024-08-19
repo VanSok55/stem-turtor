@@ -31,7 +31,7 @@ const BlogDetail = () => {
           const accessToken = localStorage.getItem("access_token");
           if (accessToken) {
             const response = await fetch(
-              `http://136.228.158.126:50001/api/follows/${blogData.author_id}/unfollow_user/`,
+              `https://stem.automatex.dev/api/follows/${blogData.author_id}/unfollow_user/`,
               {
                 method: "POST",
                 headers: {

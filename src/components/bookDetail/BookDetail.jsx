@@ -34,7 +34,7 @@ const BookDetail = () => {
     const fetchProfile = async () => {
       try {
         const response = await fetch(
-          "http://136.228.158.126:50001/api/profile/",
+          "https://stem.automatex.dev/api/profile/",
           {
             headers: {
               ...AUTH_HEADER,
@@ -74,7 +74,7 @@ const BookDetail = () => {
                           {content.file ? (
                             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
                               <Viewer
-                                fileUrl={content.file}
+                                fileUrl={`https://stem.automatex.dev/media/uploads/${content.file}`}
                                 plugins={[defaultLayoutPluginInstance]}
                               />
                             </Worker>
@@ -95,12 +95,12 @@ const BookDetail = () => {
       <div className="w-full md:w-[35%] flex flex-col gap-8 ">
         {/*  */}
         <div className="w-full p-4 bg-gray-200 rounded-lg shadow-sm flex items-center gap-4 sticky top-28   ">
-        <img
+          <img
             src={
               profile.image ||
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_JlCFnIGX5omgjEjgV9F3sBRq14eTERK9w&s"
-              }
-          alt="Profile"
+            }
+            alt="Profile"
             className="w-12 h-12 rounded-full"
           />
           <div className="ml-3 flex flex-col items-start">
