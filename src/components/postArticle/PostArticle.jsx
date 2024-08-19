@@ -5,6 +5,7 @@ import { API_BASE_URI } from "../../services/constants";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import TextEditor from "../texteditor/TextEditor";
+import article from "../../../src/assets/create_forum.jpg";
 
 const PostArticle = () => {
   const navigate = useNavigate();
@@ -77,7 +78,7 @@ const PostArticle = () => {
       <div className="bg-white shadow rounded-lg p-6">
         <div className="relative w-full h-64 bg-blue-600 rounded-lg overflow-hidden">
           <img
-            src="../src/assets/create_forum.jpg"
+            src={article}
             alt="Cartoon"
             className="object-cover w-full h-full p-2"
           />
