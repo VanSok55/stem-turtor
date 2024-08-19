@@ -13,6 +13,10 @@ import image5 from "../../../src/assets/stem_book_technology2.webp";
 import image6 from "../../../src/assets/stem_forum_technoligy3.webp";
 import image7 from "../../../src/assets/stem_book_technology5.webp";
 import image8 from '../../../src/assets/stem_book_technology6.webp';
+import card1 from "../../../src/assets/Lesspn_STEM.jpg";
+import card2 from "../../../src/assets/STEM_TOTUR.jpg";
+import card3 from "../../../src/assets/IOS programming.jpg";
+import card4 from "../../../src/assets/Python crash course E.jpg";
 AOS.init();
 const BookCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -195,7 +199,7 @@ const BookCard = () => {
             <div className="relative h-full w-full overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg"
-                src="../src/assets/Lesspn_STEM.jpg"
+                src={card1}
                 alt="Stem Book"
               />
               <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center p-3">
@@ -214,7 +218,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/IOS programming.jpg"
+                src={card2}
                 alt=""
               />
             </div>
@@ -256,7 +260,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/Python crash course E.jpg"
+                src={card3}
                 alt=""
               />
             </div>
@@ -298,7 +302,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/Mathematic.jpg"
+                src={card4}
                 alt=""
               />
             </div>
