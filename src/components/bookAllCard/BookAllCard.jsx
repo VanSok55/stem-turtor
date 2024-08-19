@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 const BookAllCard = ({ book }) => {
   return (
     <Link to={`/bookDetail/${book.id}`} className="text-blue-600 mt-4 block">
       <div className="bg-white  rounded-lg shadow-md overflow-hidden w-full border">
         <img
           src={
-            book.course_thumbnail ||
+            `https://stem.automatex.dev/media/uploads/${book.course_thumbnail}/` ||
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcff1fvUI1w0QGFGSbG7mIEPDWwRaRYaqSMA&s"
           }
           alt="Course Thumbnail"
@@ -28,7 +27,7 @@ const BookAllCard = ({ book }) => {
               >
                 បង្ហាញ
               </button>
-            </div>  
+            </div>
             <span className="text-[16px] text-gray-600 mt-4  font-suwannaphum lg:text-[17px] line-clamp-1 xl:text-[18px]">
               អ្នកបង្កើត: {book.created_by}
             </span>
