@@ -3,7 +3,6 @@ import BlogAllCard from "../../components/blogAllCard/BlogAllCard";
 import FooterCard from "../../components/footer/FooterCard";
 import Spinner from "../../components/appSpinner/Spinner";
 import NavbarComponent from "../../components/navbar/NavbarComponent";
-
 const categories = [
   "ទាំងអស់",
   "បច្ចេកវិទ្យា",
