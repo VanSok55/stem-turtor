@@ -2,10 +2,13 @@ import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button, Label, TextInput } from "flowbite-react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaRegistered } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import register from "../../../src/assets/STEM_TOTUR.jpg";
+import signout from "../../../src/assets/Sign up (3).gif";
+
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -39,7 +42,7 @@ const RegisterPage = () => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          "http://136.228.158.126:50001/api/register/",
+          "https://stem.automatex.dev/api/register/",
           values
         );
 
@@ -68,7 +71,7 @@ const RegisterPage = () => {
               បង្កើតគណនី
             </h3>
             <section className="w-20 h-20 mx-auto rounded-full mt-4 overflow-hidden">
-              <img src="../src/assets/STEM_TOTUR.jpg" alt="STEM Tutorial" className="w-full h-full object-cover" />
+              <img src={register} alt="STEM Tutorial" className="w-full h-full object-cover" />
             </section>
             <div className="space-y-3">
               <div>
@@ -245,8 +248,8 @@ const RegisterPage = () => {
             </p>
           </form>
           <img
-            src="../src/assets/Sign up (3).gif"
-            className="h-full w-full max-lg:mt-12 object-cover"
+            src={signout}
+            className="h-full w-full max-lg:mt-12 object-contain"
             autoPlay
             loop
             muted
