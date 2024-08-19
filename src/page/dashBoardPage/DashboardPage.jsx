@@ -21,7 +21,7 @@ const DashboardPage = () => {
   const userId = user ? user.id : 1; // Replace with actual user ID from user object
   const fetchPosts = async () => {
     try {
-      const response = await axios.get('http://136.228.158.126:50001/api/forums/', {
+      const response = await axios.get('https://stem.automatex.dev/api/forums/', {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -36,7 +36,7 @@ const DashboardPage = () => {
 
   const fetchArticles = async () => {
     try {
-      const response = await axios.get('http://136.228.158.126:50001/api/articles/', {
+      const response = await axios.get('https://stem.automatex.dev/api/articles/', {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
@@ -128,7 +128,6 @@ const DashboardPage = () => {
                         </div>
                       </div>
                     </a>
-  
                     <a
                       className="transform hover:scale-105 transition duration-300 shadow-xl rounded-lg col-span-1 intro-y bg-white"
                       href="#"
