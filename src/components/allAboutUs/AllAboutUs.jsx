@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
 import OnlineLearning from "../../../src/assets/Online-learning.gif";
 import course_app from "../../../src/assets/Course app.gif";
-import  muyleang from "../../../src/assets/Mentor_MuyleangDevOps.jpg";
+import muyleang from "../../../src/assets/Mentor_MuyleangDevOps.jpg";
 import jessi_ca from "../../../src/assets/Mentor_Jessica1.jpg";
 import pisal from "../../../src/assets/cuteis.jpg";
 import narith from "../../../src/assets/channarith_offical.jpg";
@@ -16,7 +16,7 @@ import ponleu from "../../../src/assets/ponleu.jpg";
 import mengeam from "../../../src/assets/mengeam.jpg";
 import bunthi from "../../../src/assets/Bunthi.jpg";
 import piseth from "../../../src/assets/Piseth_offical.jpg";
-
+import sokvan from "../../../src/assets/sokvan_offical.jpg";
 AOS.init();
 const AllAboutUs = () => {
   return (
