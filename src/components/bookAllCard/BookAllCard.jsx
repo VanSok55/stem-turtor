@@ -6,12 +6,8 @@ const BookAllCard = ({ book }) => {
       <div className="bg-white  rounded-lg shadow-md overflow-hidden w-full border">
         <img
           src={
-            book.course
-              ? book.course_thumbnail.replace(
-                  /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
-                  "https://stem.automatex.dev/media/uploads/"
-                )
-              : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcff1fvUI1w0QGFGSbG7mIEPDWwRaRYaqSMA&s"
+            `https://stem.automatex.dev/media/uploads/${book.course_thumbnail}` ||
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcff1fvUI1w0QGFGSbG7mIEPDWwRaRYaqSMA&s"
           }
           alt="Course Thumbnail"
           className="w-full h-[250px] object-cover rounded-lg"
