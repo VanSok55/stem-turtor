@@ -128,7 +128,7 @@ const LessonCard = () => {
             <Link
               to="/lesson"
               key={index}
-              className="flex-shrink-0 w-[96%] sm:w-1/2 lg:w-1/4 px-2"
+              className="flex-shrink-0 w-[96%] sm:w-1/2 lg:w-1/4 xl:w-1/3 px-2"
             >
               <div className="border bg-white text-gray-700 shadow-md rounded-lg">
                 <div className="relative h-[250px] overflow-hidden">
@@ -192,7 +192,7 @@ const LessonCard = () => {
 
       {/* second section */}
       <Link to="/lesson">
-        <section className="grid grid-cols-1 h-[430px] sm:grid-cols-2 lg:grid-cols-4 gap-4  w-[94%] mx-auto">
+        <section className="grid grid-cols-1 h-[430px] sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-3 gap-4  w-[94%] mx-auto">
         <div className="border rounded-lg bg-white text-gray-700 shadow-sm ">
             <div className="relative h-full w-full overflow-hidden">
               <img
