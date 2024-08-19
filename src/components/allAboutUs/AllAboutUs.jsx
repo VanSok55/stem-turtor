@@ -3,8 +3,13 @@ import { FaFacebook, FaGithub, FaTelegram } from "react-icons/fa";
 import { Avatar } from "flowbite-react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
+import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
 import OnlineLearning from "../../../src/assets/Online-learning.gif";
+import course_app from "../../../src/assets/Course app.gif";
+import  muyleang from "../../../src/assets/Mentor_MuyleangDevOps.jpg";
+import jessi_ca from "../../../src/assets/Mentor_Jessica1.jpg";
+
+
 AOS.init();
 const AllAboutUs = () => {
   return (
@@ -14,7 +19,7 @@ const AllAboutUs = () => {
         <div className="absolute inset-0 backdrop-blur-sm"></div>
         <img
           className="w-full h-[80vh] object-cover"
-          // src={aboutUsContent}
+          src={aboutUsContent}
           alt="About STEM"
         />
         <div className="absolute inset-0 font-suwannaphum flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
@@ -94,7 +99,7 @@ const AllAboutUs = () => {
               data-aos-duration="1500"
             >
               <img
-                src="../src/assets/Course app.gif"
+                src={course_app}
                 alt="Purpose of STEM"
                 className="w-auto h-[300px] sm:h-[400px]"
               />
@@ -118,7 +123,8 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/Mentor_MuyleangDevOps.jpg"
+                src={muyleang}
+
                 alt="Mentor"
                 height={200}
                 className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
@@ -175,7 +181,7 @@ const AllAboutUs = () => {
           >
             <div className="flex justify-center items-center">
               <img
-                src="../src/assets/Mentor_Jessica1.jpg"
+                src={jessi_ca}
                 alt="Mentor"
                 height={200}
                 className="mb-4 rounded-full border-4 border-yellow-400 w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36"
