@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { SlUserFollow } from "react-icons/sl";
 import moment from "moment";
 import "./styleBlog.css";
+
 const BlogDetail = () => {
   const { id } = useParams();
   const [blog, setBlog] = useState(null);
@@ -22,8 +23,7 @@ const BlogDetail = () => {
         setBlog(blogData);
 
         // Retrieve follow status from local storage or check from backend
-        const followedBlogs =
-          JSON.parse(localStorage.getItem("followed_blogs")) || {};
+        const followedBlogs = JSON.parse(localStorage.getItem("followed_blogs")) || {};
         if (blogData.author_id in followedBlogs) {
           setIsFollowing(followedBlogs[blogData.author_id]);
         } else {
@@ -159,13 +159,21 @@ const BlogDetail = () => {
           <h1 className="text-2xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}></h1>
           <p className="mb-4 text-[18px]" dangerouslySetInnerHTML={{ __html: blog.content || "No title" }} ></p>
           <div className="w-[60%] mx-auto flex justify-center">
-            <div>
+          <div>
               <img
                 className="w-full object-cover rounded-lg"
-                src={blog.image}
-                alt={blog.title}
+                src={
+                  blog.image
+                    ? blog.image.replace(
+                        /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                        "https://stem.automatex.dev/media/uploads/"
+                      )
+                    : "https://via.placeholder.com/150"
+                } // Fallback image if blog.image is null or undefined
+                alt={blog.title || "Image"}
               />
             </div>
+
           </div>
         </div>
 
@@ -219,33 +227,32 @@ const BlogDetail = () => {
               {[...Array(4)].map((_, index) => (
                 <li key={index} className="flex items-center space-x-4">
                   <div className="w-[80px] h-[80px] md:w-[60px] md:h-[60px] mt-3 cursor-pointer">
-                    <img
-                      src={blog.image}
-                      alt="Related article image"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                      <img
+                        src={
+                          blog.image
+                            ? blog.image.replace(
+                                /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                                "https://stem.automatex.dev/media/uploads/"
+                              )
+                            : "https://via.placeholder.com/150"
+                        } // Fallback image if blog.image is null or undefined
+                        alt={blog.title || "Related article image"} // Fallback alt text if blog.title is null or undefined
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
 
                   <div>
-                    <p className="block title-truncate text-sm md:text-base" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}>
+                    <p className="block title-truncate text-sm md:text-xs">
+                      {blog.title || "No related title"}
                     </p>
-                    <div className="text-sm md:text-[14px]">
-                      បង្កើត: {moment(blog.created_at).format("MMMM D, YYYY")}
-                    </div>
+                    <p className="text-gray-500 text-sm md:text-xs mt-2">
+                      {moment(blog.created_at).format("MMMM DD, YYYY")}
+                    </p>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Keywords Section */}
-          <div className="w-full p-4 bg-gray-200 rounded-lg shadow-md items-center gap-2 font-suwannaphum">
-            <h6 className="text-gray-800 font-semibold text-lg md:text-base mb-2">
-              ពាក្យគន្លឹះ:
-            </h6>
-            <span className="mt-2 px-4 py-2 text-sm md:text-xs bg-gray-100 rounded-full text-gray-700 cursor-pointer hover:bg-blue-500 hover:text-white">
-              មិនទាន់មានពាក្យគន្លឹះទេ
-            </span>
           </div>
         </div>
       </section>
