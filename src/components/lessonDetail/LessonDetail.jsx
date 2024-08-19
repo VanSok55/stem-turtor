@@ -24,7 +24,7 @@ const LessonDetail = () => {
   return (
     <>
       {" "}
-      <section className="w-[80%] h-auto mx-auto mt-8 grid grid-cols-1 lg:grid-cols-[69%_29%] gap-[2%] font-suwannaphum">
+      <section className="w-[80%] h-auto mx-auto mt-8 grid grid-cols-1 lg:grid-cols-[69%_29%] gap-[2%] font-suwannaphum mb-10">
         <div className="w-full p-2 bg-[#F5F5F5]">
           <h3 className="text-[24px] font-semibold text-black">
             {lesson.lesson_title}
@@ -81,17 +81,7 @@ const LessonDetail = () => {
           </ul>
         </div>
       </section>
-      <section className="mt-8 w-[80%] mx-auto h-auto bg-[#F5F5F5] p-4 font-suwannaphum">
-        <ul>
-          <li>អំពីមេរៀន</li>
-          <li className="p-5">
-            គណិតវិទ្យាថ្នាក់ទី១២ បង្រៀនដោយលោកគ្រូ ថុល ចាន់ថន ។
-            នៅក្នុងវីដេអូមានលក្ខណៈកែលំហាត់ ហ្វឹកហាត់ ។
-            សិស្សអាចធ្វើការស្វ័យសិក្សាតាមរយៈវីដេអូ ។របៀបរៀនតាមវីដេអូ៖ មើលវីដេអូ
-            ហ្វឹកហាត់លំហាត់តាមរយៈឧទាហរណ៍ដែលបានដោះស្រាយ ។
-          </li>
-        </ul>
-      </section>
+      
     </>
   );
 };
