@@ -8,6 +8,7 @@ import axios from "axios";
 import { AUTH_HEADER } from "../../services/constants";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReply, faTimes } from '@fortawesome/free-solid-svg-icons';
+import comment from "../../../src/assets/Online learning (2).gif"
 
 const CreateComment = () => {
   const { id } = useParams();
@@ -50,7 +51,7 @@ const CreateComment = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://136.228.158.126:50001/api/comments/",
+        "https://stem.automatex.dev/api/comments/",
         {
           forum_id: id,
           content: replyText,
@@ -97,7 +98,7 @@ const CreateComment = () => {
             <div className="sm:w-[255px] sm:ml-8 mt-5 sm:mt-0">
               <img
                 className="w-full h-auto rounded-xl object-cover"
-                src="../src/assets/Online learning (2).gif"
+                src={comment}
                 alt="Learning by yourself"
               />
             </div>
