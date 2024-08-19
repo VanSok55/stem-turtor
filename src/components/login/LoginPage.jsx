@@ -70,20 +70,20 @@ const LoginPage = () => {
     try {
       // Register user
       const registerResponse = await axios.post(
-        "http://136.228.158.126:50001/api/register/",
+        "https://stem.automatex.dev/api/register/",
         { email: response.profileObj.email }
       );
 
       // Assuming the API sends an OTP to the user's email
       const otpResponse = await axios.post(
-        "http://136.228.158.126:50001/api/verify-otp/",
+        "https://stem.automatex.dev/api/verify-otp/",
         { otp }
       );
 
       if (otpResponse.status === 200) {
         // Log in the user
         const loginResponse = await axios.post(
-          "http://136.228.158.126:50001/api/login/",
+          "https://stem.automatex.dev/api/login/",
           { email: response.profileObj.email, otp }
         );
 
