@@ -74,7 +74,10 @@ const BookDetail = () => {
                           {content.file ? (
                             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
                               <Viewer
-                                fileUrl={`https://stem.automatex.dev/media/uploads/${content.file}`}
+                                fileUrl={content.file.replace(
+                                  /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                                  "https://stem.automatex.dev/"
+                                )}
                                 plugins={[defaultLayoutPluginInstance]}
                               />
                             </Worker>
