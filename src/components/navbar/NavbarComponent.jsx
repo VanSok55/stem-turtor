@@ -18,7 +18,7 @@ const NavbarComponent = () => {
       const fetchProfile = async () => {
         try {
           const response = await fetch(
-            "http://136.228.158.126:50001/api/profile/",
+            "https://stem.automatex.dev/api/profile/",
             {
               headers: {
                 ...AUTH_HEADER,
@@ -115,7 +115,14 @@ const NavbarComponent = () => {
             <Dropdown
               arrowIcon={false}
               inline
-              label={<Avatar alt="User settings" img={profile.image} rounded   className="sm:w-10 sm:h-10 md:w-10  md:h-10  xl:w-[80px] xl:h-[70px] 2xl:w-2.5rem 2xl:h-2.5rem "/>}
+              label={
+                <Avatar
+                  alt="User settings"
+                  img={profile.image}
+                  rounded
+                  className="sm:w-10 sm:h-10 md:w-10  md:h-10  xl:w-[80px] xl:h-[70px] 2xl:w-2.5rem 2xl:h-2.5rem "
+                />
+              }
             >
               <Dropdown.Header className="font-suwannaphum text-sm sm:text-md">
                 User Actions
