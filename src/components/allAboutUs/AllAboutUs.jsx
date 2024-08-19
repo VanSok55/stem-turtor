@@ -3,6 +3,7 @@ import { FaFacebook, FaGithub, FaTelegram } from "react-icons/fa";
 import { Avatar } from "flowbite-react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import aboutUsContent from "../src/assets/AboutUs_content.jpg";
 AOS.init();
 const AllAboutUs = () => {
   return (
@@ -13,7 +14,7 @@ const AllAboutUs = () => {
       <div className="absolute inset-0 backdrop-blur-sm"></div>
         <img
           className="w-full h-[80vh] object-cover"
-          src="../src/assets/AboutUs_content.jpg"
+          src={aboutUsContent}
           alt="About STEM"
         />
         <div className="absolute inset-0 font-suwannaphum flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
