@@ -3,19 +3,18 @@ import { FaFacebook, FaGithub, FaTelegram } from "react-icons/fa";
 import { Avatar } from "flowbite-react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
+// import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
 import OnlineLearning from "../../../src/assets/Online-learning.gif";
 AOS.init();
 const AllAboutUs = () => {
   return (
     <>
       {/* Hero */}
-
       <section className="relative">
         <div className="absolute inset-0 backdrop-blur-sm"></div>
         <img
           className="w-full h-[80vh] object-cover"
-          src={aboutUsContent}
+          // src={aboutUsContent}
           alt="About STEM"
         />
         <div className="absolute inset-0 font-suwannaphum flex flex-col justify-center items-center text-white bg-black bg-opacity-50">
@@ -103,7 +102,6 @@ const AllAboutUs = () => {
           </div>
         </div>
       </section>
-
       {/* Our Mentor */}
       <div className="mt-10 flex  flex-col justify-center w-max gap-20 mx-auto">
         <marquee behavior="" direction="">
