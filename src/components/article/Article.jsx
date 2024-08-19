@@ -182,7 +182,7 @@ const Article = () => {
         }
 
         const response = await fetch(
-          `http://136.228.158.126:50001/api/articles/${id}/`,
+          `https://stem.automatex.dev/api/articles/${id}/`,
           {
             method: "DELETE",
             headers: {
@@ -216,7 +216,7 @@ const Article = () => {
       }
 
       const response = await fetch(
-        `http://136.228.158.126:50001/api/articles/?page=${currentPage}`,
+        `https://stem.automatex.dev/api/articles/?page=${currentPage}`,
         {
           headers: {
             Authorization: `Bearer ${accessToken}`,

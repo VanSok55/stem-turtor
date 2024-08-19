@@ -40,7 +40,12 @@ const BlogAllCard = ({ blog }) => {
       <div className="bg-white rounded-lg shadow-md border overflow-hidden sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
         <div className="flex flex-col justify-between leading-normal rounded-lg w-full">
           <img
-            src={blog.image || "../src/assets/placeholder.png"}
+            src={
+              blog.image.replace(
+                /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                "https://stem.automatex.dev/media/uploads/"
+              ) || "../src/assets/placeholder.png"
+            }
             onError={(e) => {
               e.target.onerror = null;
               e.target.src = "../src/assets/placeholder.png";
@@ -68,7 +73,10 @@ const BlogAllCard = ({ blog }) => {
                 <img
                   className="w-9 h-9 sm:w-9 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-12 xl:h-12 rounded-full object-cover"
                   src={
-                    blog.profileUser ||
+                    blog.profileUser.replace(
+                      /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                      "https://stem.automatex.dev/media/uploads/"
+                    ) ||
                     "https://cdna.artstation.com/p/assets/images/images/034/807/864/large/gil-lagziel-oggy-artstation1.jpg?1613299994"
                   }
                   alt="Avatar"
