@@ -17,6 +17,24 @@ const CreateComment = () => {
   const [replyText, setReplyText] = useState("");
   const replyFormRef = useRef(null);
 
+  // Define fetchForumByid function
+  const fetchForumByid = async (forumId) => {
+    try {
+      const response = await axios.get(
+        `https://stem.automatex.dev/api/forums/${forumId}`,
+        {
+          headers: {
+            ...AUTH_HEADER,
+          },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching forum data:", error);
+      throw error;
+    }
+  };
+
   useEffect(() => {
     const fetchForumData = async () => {
       try {
