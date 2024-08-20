@@ -27,8 +27,12 @@ export default function CardForum({ forums }) {
         <div className="flex items-center mb-4">
           <img
             src={
-              forums.profileUser ||
-              "https://cdna.artstation.com/p/assets/images/images/034/807/864/large/gil-lagziel-oggy-artstation1.jpg?1613299994"
+              forums.profileUser
+              ? forums.profileUser.replace(
+              /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+               "https://stem.automatex.dev/media/uploads/"
+               )
+              : "https://via.placeholder.com/150"
             }
             alt="Avatar"
             className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
