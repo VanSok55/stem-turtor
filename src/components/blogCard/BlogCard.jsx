@@ -275,8 +275,6 @@ const BlogCard = () => {
             </div>
           </div>
         </section>
-
-
         {/* second section */}
         </Link>
       {/* slide bar */}

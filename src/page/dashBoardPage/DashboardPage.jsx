@@ -162,7 +162,7 @@ const DashboardPage = () => {
                       </div>
                       <div className="ml-2 w-full flex-1">
                         <div>
-                          <div className="mt-3 text-3xl font-bold leading-8">0</div>
+                          <div className="mt-3 text-3xl font-bold leading-8">8</div>
                           <div className="mt-1 text-base text-gray-600">Total Likes</div>
                         </div>
                       </div>

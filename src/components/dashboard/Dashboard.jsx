@@ -107,7 +107,11 @@ const Dashboard = () => {
             fill="#1C64F2"
           />
         </svg>
-        Loading...
+            <button id="loadingButton" class="loading-btn">
+            <span class="loading-text"></span>
+            <div class="spinner"></div>
+          </button>
+
       </button>
     );
   }
