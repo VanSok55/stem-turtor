@@ -1,14 +1,12 @@
 import { useEffect, useState, useRef } from "react";
-import { Button } from "flowbite-react";
 import { useParams } from "react-router-dom";
-import { fetchForumByid } from "../../services/fetchForumByid";
-import FooterCard from "../footer/FooterCard";
-import ReplyCard from "../rpCrad/ReplyCard";
 import axios from "axios";
 import { AUTH_HEADER } from "../../services/constants";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReply, faTimes } from '@fortawesome/free-solid-svg-icons';
-import comment from "../../../src/assets/Online learning (2).gif"
+import FooterCard from "../footer/FooterCard";
+import ReplyCard from "../rpCrad/ReplyCard";
+import comment from "../../../src/assets/Online learning (2).gif";
 
 const CreateComment = () => {
   const { id } = useParams();
@@ -35,7 +33,7 @@ const CreateComment = () => {
           })
         );
       } catch (error) {
-        console.error("Error fetching forums data:", error);
+        console.error("Error fetching forum data:", error);
       }
     };
 
@@ -49,6 +47,7 @@ const CreateComment = () => {
 
   const handleReplySubmit = async (e) => {
     e.preventDefault();
+    if (!replyText.trim()) return; // Prevent empty replies
     try {
       const response = await axios.post(
         "https://stem.automatex.dev/api/comments/",
@@ -66,7 +65,7 @@ const CreateComment = () => {
       if (response.status === 201) {
         setReplyText("");
         setShowReplyForm(false);
-        // Optionally reload or refresh the comments section
+        // Optionally refresh the comments section here
       }
     } catch (error) {
       console.error("Error submitting reply:", error);
@@ -78,12 +77,12 @@ const CreateComment = () => {
   };
 
   if (!forum) {
-    return <div>Loading...</div>;
+    return <div>Loading forum details...</div>; // Improved loading state
   }
 
   return (
     <>
-      <section className="">
+      <section>
         <main className="max-w-screen-xl mx-auto px-4 sm:px-0">
           <div className="w-full mx-auto h-auto relative bg-white p-5 sm:p-8 flex flex-col sm:flex-row sm:items-center">
             <div className="sm:flex-1">
@@ -103,7 +102,6 @@ const CreateComment = () => {
               />
             </div>
           </div>
-
 
           <section className="max-w-screen-xl mx-auto mt-10 px-4 sm:px-0 font-suwannaphum">
             <div className="w-[100%] mx-auto bg-[#ffffff] border rounded-lg">
@@ -139,35 +137,27 @@ const CreateComment = () => {
               ></p>
               <div className="flex justify-center items-center transition-shadow duration-300">
                 <img
-                  className="w-[700px]  my-5 rounded-lg dark:shadow-gray-800 mt-1"
-                  src=
-                  {
+                  className="w-[700px] my-5 rounded-lg dark:shadow-gray-800 mt-1"
+                  src={
                     forum.image
                       ? forum.image.replace(
                           /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
                           "https://stem.automatex.dev/media/uploads/"
                         )
                       : "https://via.placeholder.com/150"
-                  } 
-                  alt="image description"
+                  }
+                  alt="Forum content"
                 />
               </div>
 
               <div className="flex justify-end items-center mr-5 mt-5">
                 <div className="ml-5 mb-5">
-                  <a
-                    href="#"
+                  <button
                     className="text-gray-500 hover:text-gray-700 mr-4 mb-2"
-                  >
-                    <i className="far fa-thumbs-up"></i> Like
-                  </a>
-
-                  <a
-                    className="text-gray-500 hover:text-gray-700 mr-4 mb-2 cursor-pointer"
                     onClick={handleReplyClick}
                   >
-                    <i className="far fa-thumbs-up"></i> Reply
-                  </a>
+                    <FontAwesomeIcon icon={faReply} size="lg" /> Reply
+                  </button>
                 </div>
               </div>
 
@@ -191,28 +181,24 @@ const CreateComment = () => {
                       type="submit"
                       className="p-2 rounded-full text-blue-500 hover:bg-blue-100"
                     >
-                      <FontAwesomeIcon icon={faReply} size="l" />
+                      <FontAwesomeIcon icon={faReply} size="lg" />
                     </button>
                     <button
                       type="button"
                       className="p-2 rounded-full text-gray-500 hover:bg-gray-100"
                       onClick={() => setShowReplyForm(false)}
                     >
-                      <FontAwesomeIcon icon={faTimes} size="l" />
+                      <FontAwesomeIcon icon={faTimes} size="lg" />
                     </button>
                   </div>
                 </form>
               </div>
             </div>
-
-            <div className="w-[100%] mx-auto rounded-lg p-5 mt-6">
-              <div className="mt-4">
-                <ReplyCard forumId={id} />
-              </div>
-            </div>
           </section>
         </main>
       </section>
+
+      <ReplyCard />
       <FooterCard />
     </>
   );
