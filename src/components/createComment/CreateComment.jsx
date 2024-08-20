@@ -1,14 +1,13 @@
 import { useEffect, useState, useRef } from "react";
-import { Button } from "flowbite-react";
 import { useParams } from "react-router-dom";
-import { fetchForumByid } from "../../services/fetchForumByid";
-import FooterCard from "../footer/FooterCard";
-import ReplyCard from "../rpCrad/ReplyCard";
 import axios from "axios";
 import { AUTH_HEADER } from "../../services/constants";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReply, faTimes } from '@fortawesome/free-solid-svg-icons';
-import comment from "../../../src/assets/Online learning (2).gif"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReply, faTimes } from "@fortawesome/free-solid-svg-icons";
+import comment from "../../../src/assets/Online learning (2).gif";
+import FooterCard from "../footer/FooterCard";
+import ReplyCard from "../rpCrad/ReplyCard";
+import { fetchForumByid } from "../../services/fetchForumByid";
 
 const CreateComment = () => {
   const { id } = useParams();
@@ -49,6 +48,12 @@ const CreateComment = () => {
 
   const handleReplySubmit = async (e) => {
     e.preventDefault();
+    
+    if (!replyText.trim()) {
+      console.warn("Reply text is empty.");
+      return;
+    }
+
     try {
       const response = await axios.post(
         "https://stem.automatex.dev/api/comments/",
@@ -63,6 +68,9 @@ const CreateComment = () => {
           },
         }
       );
+
+      console.log("Response:", response);
+      
       if (response.status === 201) {
         setReplyText("");
         setShowReplyForm(false);
@@ -83,7 +91,7 @@ const CreateComment = () => {
 
   return (
     <>
-      <section className="">
+      <section>
         <main className="max-w-screen-xl mx-auto px-4 sm:px-0">
           <div className="w-full mx-auto h-auto relative bg-white p-5 sm:p-8 flex flex-col sm:flex-row sm:items-center">
             <div className="sm:flex-1">
@@ -103,7 +111,6 @@ const CreateComment = () => {
               />
             </div>
           </div>
-
 
           <section className="max-w-screen-xl mx-auto mt-10 px-4 sm:px-0 font-suwannaphum">
             <div className="w-[100%] mx-auto bg-[#ffffff] border rounded-lg">
@@ -140,15 +147,14 @@ const CreateComment = () => {
               <div className="flex justify-center items-center transition-shadow duration-300">
                 <img
                   className="w-[700px]  my-5 rounded-lg dark:shadow-gray-800 mt-1"
-                  src=
-                  {
+                  src={
                     forum.image
                       ? forum.image.replace(
                           /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
                           "https://stem.automatex.dev/media/uploads/"
                         )
                       : "https://via.placeholder.com/150"
-                  } 
+                  }
                   alt="image description"
                 />
               </div>
