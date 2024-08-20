@@ -48,7 +48,7 @@ const CreateComment = () => {
 
   const handleReplySubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!replyText.trim()) {
       console.warn("Reply text is empty.");
       return;
@@ -70,11 +70,11 @@ const CreateComment = () => {
       );
 
       console.log("Response:", response);
-      
+
       if (response.status === 201) {
         setReplyText("");
         setShowReplyForm(false);
-        // Optionally reload or refresh the comments section
+        // Optionally reload or refresh the comments section here
       }
     } catch (error) {
       console.error("Error submitting reply:", error);
@@ -161,19 +161,12 @@ const CreateComment = () => {
 
               <div className="flex justify-end items-center mr-5 mt-5">
                 <div className="ml-5 mb-5">
-                  <a
-                    href="#"
+                  <button
                     className="text-gray-500 hover:text-gray-700 mr-4 mb-2"
-                  >
-                    <i className="far fa-thumbs-up"></i> Like
-                  </a>
-
-                  <a
-                    className="text-gray-500 hover:text-gray-700 mr-4 mb-2 cursor-pointer"
                     onClick={handleReplyClick}
                   >
                     <i className="far fa-thumbs-up"></i> Reply
-                  </a>
+                  </button>
                 </div>
               </div>
 
