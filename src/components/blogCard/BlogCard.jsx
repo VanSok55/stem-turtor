@@ -280,7 +280,7 @@ const BlogCard = () => {
         {/* second section */}
         </Link>
       {/* slide bar */}
-      <section className="relative w-[95%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
+      <section className="relative w-[95%] mx-auto overflow-hidden rounded-lg mb-5 gap-4 mt-5">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
