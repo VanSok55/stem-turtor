@@ -46,7 +46,7 @@ const Setting = () => {
         const imageFormData = new FormData();
         imageFormData.append("file", formData.image);
         const imageResponse = await axios.post(
-          "http://136.228.158.126:50001/api/upload/",
+          "https://stem.automatex.dev/api/upload/",
           imageFormData,
           {
             headers: {
@@ -64,7 +64,7 @@ const Setting = () => {
       };
 
       const response = await axios.put(
-        "http://136.228.158.126:50001/api/profile/",
+        "https://stem.automatex.dev/api/profile/",
         updatedFormData,
         {
           headers: {
@@ -115,7 +115,7 @@ const Setting = () => {
     const fetchProfileData = async () => {
       try {
         const response = await axios.get(
-          "http://136.228.158.126:50001/api/profile/",
+          "https://stem.automatex.dev/api/profile/",
           {
             headers: {
               ...AUTH_HEADER,
@@ -304,13 +304,18 @@ const Setting = () => {
                   <div className="w-40 h-40 bg-blue-500 rounded-full flex justify-center items-center">
                       <img
                         src={
-                          profileData.image ||
-                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_JlCFnIGX5omgjEjgV9F3sBRq14eTERK9w&s"
+                          profileData.image
+                            ? profileData.image.replace(
+                                /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                                "https://stem.automatex.dev/media/uploads/"
+                              )
+                            : "https://via.placeholder.com/150"
                         }
                         alt="Profile"
-                        className="w-40 h-40 rounded-full object-cover border-4 border-[#16A1DF]"
+                        className="w-40 h-40 rounded-full object-cover border-4 border-[#16A1DF]" // Corrected placement of className
                       />
                     </div>
+
 
                   </div>
                 </div>
