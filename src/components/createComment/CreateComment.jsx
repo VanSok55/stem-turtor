@@ -110,8 +110,12 @@ const CreateComment = () => {
               <div className="flex items-center mb-6 mt-5">
                 <img
                   src={
-                    forum.profileUser ||
-                    "https://wallpapers.com/images/hd/smiling-close-up-oggy-and-the-cockroaches-71njhqoakbau7nbm.jpg"
+                    forum.profileUser
+                      ? forum.profileUser.replace(
+                          /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                          "https://stem.automatex.dev/media/uploads/"
+                        )
+                      : "https://via.placeholder.com/150"
                   }
                   alt="Avatar"
                   className="w-12 h-12 rounded-full mr-4 ml-5"
@@ -136,7 +140,15 @@ const CreateComment = () => {
               <div className="flex justify-center items-center transition-shadow duration-300">
                 <img
                   className="w-[700px]  my-5 rounded-lg dark:shadow-gray-800 mt-1"
-                  src={forum.image}
+                  src=
+                  {
+                    forum.image
+                      ? forum.profileUser.replace(
+                          /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                          "https://stem.automatex.dev/media/uploads/"
+                        )
+                      : "https://via.placeholder.com/150"
+                  } 
                   alt="image description"
                 />
               </div>
