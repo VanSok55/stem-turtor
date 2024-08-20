@@ -71,7 +71,14 @@ const Article = () => {
       sortable: true,
       cell: (row) => (
         <img
-          src={row.image}
+          src={
+            row.image
+              ? row.image.replace(
+                  /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                  "https://stem.automatex.dev/media/uploads/"
+                )
+              : "https://via.placeholder.com/150"
+          }
           alt={row.title}
           className="w-16 h-16 object-cover"
         />
