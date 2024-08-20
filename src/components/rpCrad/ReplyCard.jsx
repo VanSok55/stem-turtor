@@ -53,7 +53,7 @@ const ReplyCard = ({ forumId }) => {
     try {
       const accessToken = localStorage.getItem("access_token");
       const response = await fetch(
-        `http://136.228.158.126:50001/api/forums/${forumId}/comments/`,
+        `https://stem.automatex.dev/api/forums/${forumId}/comments/`,
         {
           method: "POST",
           headers: {
