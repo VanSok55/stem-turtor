@@ -143,7 +143,7 @@ const CreateComment = () => {
                   src=
                   {
                     forum.image
-                      ? forum.profileUser.replace(
+                      ? forum.image.replace(
                           /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
                           "https://stem.automatex.dev/media/uploads/"
                         )
