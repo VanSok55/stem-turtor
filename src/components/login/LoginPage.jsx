@@ -193,7 +193,6 @@ const LoginPage = () => {
                       </div>
                     </div>
                   </div>
-
                   <div className="mt-8">
                     <label className="text-gray-800 text-[18px] block mb-2">
                       លេខសម្ងាត់

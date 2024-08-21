@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook, FaGithub, FaTelegram } from "react-icons/fa";
 import { Avatar } from "flowbite-react";
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css';
 import aboutUsContent from "../../../src/assets/AboutUs_content.jpg";
 import OnlineLearning from "../../../src/assets/Online-learning.gif";
 import course_app from "../../../src/assets/Course app.gif";
@@ -64,6 +64,7 @@ const AllAboutUs = () => {
                 data-aos="zoom-in-up"
                 data-aos-duration="1500"
               >
+                
                 <h2 className="font-suwannaphum uppercase font-bold text-2xl text-[#0056B1] mb-9 text-center sm:text-3xl">
                   អំពី STEM
                 </h2>
@@ -104,6 +105,7 @@ const AllAboutUs = () => {
               className="img-box ml-14"
               data-aos="fade-up"
               data-aos-duration="1500"
+              
             >
               <img
                 src={course_app}
@@ -131,6 +133,7 @@ const AllAboutUs = () => {
             <div className="flex justify-center items-center">
               <img
                 src={muyleang}
+                
 
                 alt="Mentor"
                 height={200}

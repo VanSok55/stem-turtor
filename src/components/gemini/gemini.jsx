@@ -5,7 +5,7 @@ import { HiOutlinePaperAirplane, HiX } from 'react-icons/hi'; // Import HiX for 
 import "../../App.css";
 import dashboard from "../../../src/assets/STEM_LOGO_TUTOR.png";
 import robot from "../../../src/assets/robot (1).png";
-import logo_AI from "../../../src/assets/STEM_LOGO_TUTOR.png";
+import logo_AI from "../../../src/assets/STEM_TOTUR.jpg";
 // GeminiChat Component
 function GeminiChat({ language, handleLanguageChange, onClose }) {
   const [messages, setMessages] = useState([

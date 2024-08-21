@@ -59,6 +59,7 @@ const ForumContent = () => {
               </li>
               <li className="text-gray-900 hover:underline font-suwannaphum">
                 តើតំបន់ណាដែលសាកសមសម្រាប់ការសិក្សា STEM?
+
               </li>
               <li className="text-gray-900 hover:underline font-suwannaphum">
                 តើគោលបំណងនៃការសិក្សា STEM គឺអ្វី?
@@ -107,7 +108,6 @@ const ForumContent = () => {
             </ul>
           </div>
         </aside>
-
     </main>
    </div>
   );

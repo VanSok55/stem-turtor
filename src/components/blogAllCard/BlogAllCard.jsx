@@ -73,7 +73,7 @@ const BlogAllCard = ({ blog }) => {
             <div className="flex items-center mt-3">
               <a href="#">
                 <img
-                  className="w-9 h-9 sm:w-9 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-12 xl:h-12 rounded-full object-cover"
+                  className="w-9 h-9 sm:w-9 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-12 xl:h-12 xl:ml-3 rounded-full object-cover"
                   src={
                     blog.profileUser
                       ? blog.profileUser.replace(
@@ -85,7 +85,7 @@ const BlogAllCard = ({ blog }) => {
                   alt="Avatar"
                 />
               </a>
-              <div className="flex flex-col">
+              <div className="flex flex-col xl:mb-2 ">
                 <span className="ml-2 sm:ml-3 md:ml-4 lg:ml-5 xl:ml-6 rounded m-2 text-gray-600 font-semibold hover:text-indigo-600 font-suwannaphum text-[14px] sm:text-[16px] md:text-[18px]">
                   {blog.author}
                 </span>

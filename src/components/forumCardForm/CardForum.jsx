@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 export default function CardForum({ forums }) {
   const [formattedDate, setFormattedDate] = useState("");
   const [isExpanded, setIsExpanded] = useState(false);
-
   useEffect(() => {
     const formatDate = () => {
       const date = new Date(forums.updated_at);
@@ -17,6 +15,7 @@ export default function CardForum({ forums }) {
       });
     };
     setFormattedDate(formatDate());
+  
   }, [forums.updated_at]);
 
   const handleToggle = () => setIsExpanded(!isExpanded);
@@ -47,7 +46,7 @@ export default function CardForum({ forums }) {
           </div>
         </div>
         <h2
-          className="card-title font-bold text-lg md:text-xl text-gray-800"
+          className="card-title font-bold text-lg md:text-xl text-gray-800 font-suwannaphum"
           dangerouslySetInnerHTML={{ __html: forums.title || "No title" }}
         ></h2>
         <p
@@ -60,9 +59,10 @@ export default function CardForum({ forums }) {
         ></p>
         <button
             onClick={handleToggle}
-            className="mt-2 bg-blue-600 text-md px-2 py-1 xl:px-4 xl:py-2 rounded-lg xl:text-lg font-suwannaphum text-white hover:underline focus:outline-none md:text-xl lg:text-1xl xl:text-1xl"
+            className="mt-2 bg-blue-600 text-md px-2 py-1 xl:px-3 xl:py-2 rounded-lg xl:text-lg font-suwannaphum text-white hover:underline focus:outline-none md:text-xl lg:text-1xl "
           >
             {isExpanded ? "See less" : "See more"}
+
           </button>
       </Link>
     </div>
