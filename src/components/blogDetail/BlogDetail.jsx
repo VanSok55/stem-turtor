@@ -132,7 +132,6 @@ const BlogDetail = () => {
           : "You have unfollowed this blog."
       );
       setFollowError("");
-
       const followedBlogs =
         JSON.parse(localStorage.getItem("followed_blogs")) || {};
       followedBlogs[blog.author_id] = newIsFollowing;
@@ -145,7 +144,7 @@ const BlogDetail = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   if (!blog) {
