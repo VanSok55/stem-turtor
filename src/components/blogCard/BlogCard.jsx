@@ -121,7 +121,9 @@ const BlogCard = () => {
       </section>
       <Link to="/blog">
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto">
-          <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]">
+          <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]" 
+             data-aos="fade-up"
+             data-aos-duration="1700">
             <div className="relative h-full w-full overflow-hidden">
               <img
                 className="h-full w-full rounded-lg object-cover opacity-100 transition duration-300 ease-in-out transform scale-100"
@@ -141,7 +143,9 @@ const BlogCard = () => {
           </div>
 
           {/* Card1 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+             data-aos="fade-up"
+             data-aos-duration="1700">
             <div className="relative h-[250px] overflow-hidden ">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -186,7 +190,9 @@ const BlogCard = () => {
             </div>
           </div>
           {/* Card2 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+             data-aos="fade-up"
+             data-aos-duration="1700">
             <div className="relative h-[250px] overflow-hidden ">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -231,7 +237,9 @@ const BlogCard = () => {
             </div>
           </div>
           {/* Card3 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+               data-aos="fade-up"
+               data-aos-duration="1700">
             <div className="relative h-[250px] overflow-hidden ">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -289,7 +297,9 @@ const BlogCard = () => {
               key={index}
               className="flex-shrink-0 w-[96%] sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
             >
-              <div className="border bg-white text-gray-700 shadow-md rounded-lg">
+              <div className="border bg-white text-gray-700 shadow-md rounded-lg" 
+                   data-aos="fade-up"
+                   data-aos-duration="1700">
                 <div className="relative h-[250px] overflow-hidden">
                   <img
                     className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"

@@ -14,8 +14,8 @@ import image6 from "../../../src/assets/stem_forum_technoligy3.webp";
 import image7 from "../../../src/assets/stem_book_technology5.webp";
 import image8 from '../../../src/assets/stem_book_technology6.webp';
 import card1 from "../../../src/assets/Lesspn_STEM.jpg";
-import card2 from "../../../src/assets/STEM_TOTUR.jpg";
-import card3 from "../../../src/assets/IOS programming.jpg";
+import card2 from "../../../src/assets/IOS programming.jpg";
+import card3 from "../../../src/assets/Mathematic.jpg";
 import card4 from "../../../src/assets/Python crash course E.jpg";
 AOS.init();
 const BookCard = () => {
@@ -134,8 +134,8 @@ const BookCard = () => {
               className="flex-shrink-0 w-[96%] sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
             >
               <div className="border  bg-white text-gray-700 shadow-md rounded-lg "  
-              data-aos="fade-up"
-              data-aos-duration="1700">
+                  data-aos="fade-up"
+                  data-aos-duration="1700">
                 <div className="relative h-[250px] overflow-hidden ">
                   <img
                     className="w-full h-[200px] xl:h-full xl:w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -197,10 +197,10 @@ const BookCard = () => {
       <Link to="/book">
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto">
           {/* Card 1 */}
-          <div className="border rounded-lg bg-white text-gray-700 shadow-sm transition-transform duration-500 ease-in-out">
-            <div className="relative h-full w-full overflow-hidden" 
-                  data-aos="fade-up"
-                  data-aos-duration="1700">
+          <div className="border rounded-lg bg-white text-gray-700 shadow-sm transition-transform duration-500 ease-in-out" 
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            <div className="relative h-full w-full overflow-hidden" >
               <img
                 className="h-full w-full object-cover rounded-t-lg"
                 src={card1}
@@ -218,10 +218,10 @@ const BookCard = () => {
             </div>
           </div>
           {/* Card 2 */}
-          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full">
-            <div className="relative h-[250px] overflow-hidden"
-                    data-aos="fade-up"
-                    data-aos-duration="1700">
+          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full" 
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
                 src={card2}
@@ -262,10 +262,10 @@ const BookCard = () => {
             </div>
           </div>
           {/* Card 3 */}
-          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full">
-            <div className="relative h-[250px] overflow-hidden"
-                    data-aos="fade-up"
-                    data-aos-duration="1700">
+          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full"
+            data-aos="fade-up"
+            data-aos-duration="1700">
+            <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
                 src={card3}
@@ -306,10 +306,10 @@ const BookCard = () => {
             </div>
           </div>
           {/* Card 4 */}
-          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full">
-            <div className="relative h-[250px] overflow-hidden"
-                    data-aos="fade-up"
-                    data-aos-duration="1700">
+          <div className="border rounded-lg bg-white text-gray-700 shadow-md h-full"
+             data-aos="fade-up"
+             data-aos-duration="1700">
+            <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
                 src={card4}
