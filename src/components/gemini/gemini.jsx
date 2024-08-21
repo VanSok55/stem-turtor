@@ -3,21 +3,18 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import { Card, TextInput, Button, Dropdown, Modal, Spinner, Textarea } from 'flowbite-react';
 import { HiOutlinePaperAirplane, HiX } from 'react-icons/hi'; // Import HiX for the close icon
 import "../../App.css";
-import dashboard from "../../../src/assets/STEM_LOGO_TUTOR.png";
+import dashboard from "../../../src/assets/STEM_TOTUR.jpg";
 import robot from "../../../src/assets/robot (1).png";
 import logo_AI from "../../../src/assets/STEM_TOTUR.jpg";
-// GeminiChat Component
 function GeminiChat({ language, handleLanguageChange, onClose }) {
   const [messages, setMessages] = useState([
     { sender: 'bot', text: 'Welcome to STEM Online! How can I assist you today?' },
     { sender: 'bot', text: 'Feel free to ask any questions related to STEM topics.' },
   ]);
-
   const [prompt, setPrompt] = useState('');
   const [loading, setLoading] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
-  const typingRef = useRef(null);
-
+  const typingRef = useRef(null); 
   const typeMessage = (text) => {
     setIsTyping(true);
     let index = 0;
