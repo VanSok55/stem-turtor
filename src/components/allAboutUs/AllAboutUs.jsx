@@ -8,7 +8,7 @@ import OnlineLearning from "../../../src/assets/Online-learning.gif";
 import course_app from "../../../src/assets/Course app.gif";
 import muyleang from "../../../src/assets/Mentor_MuyleangDevOps.jpg";
 import jessi_ca from "../../../src/assets/Mentor_Jessica1.jpg";
-import pisal from "../../../src/assets/cuteis.jpg";
+import pisal from "../../../src/assets/leader.jpg";
 import narith from "../../../src/assets/channarith_offical.jpg";
 import sreyneang from "../../../src/assets/sreyneang.jpg";
 import kanika from "../../../src/assets/kanika.jpg";

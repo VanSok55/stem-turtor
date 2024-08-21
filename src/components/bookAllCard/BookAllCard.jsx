@@ -23,16 +23,16 @@ const BookAllCard = ({ book }) => {
           <p className="text-[13px]  text-gray-700 line-clamp-1 xl:text-[18px] leading-tight mt-3">
             {book.course_description}
           </p>
-          <div className="flex justify-between mb-2 items-center xl:text-sm">
-            <div className="flex items-center">
+          <div className="flex justify-between mb-2 items-center xl:text-sm mx-2">
+            <div className="flex items-center ">
               <button
-                className="h-[25px]​ xl:h-[40px] mt-4 rounded-md text-[18px] lg:px-2 lg:py-0 xl:px-3 font-suwannaphum bg-gradient-to-r bg-blue-600 p-4 px-2 py-1 text-white"
+                className="h-[25px]​ xl:h-[40px] mt-4 rounded-md text-[18px] lg:px-2 lg:py-0 xl:px-3 font-suwannaphum bg-gradient-to-r bg-blue-600 p-4 px-2 py-1 text-white "
                 onClick={() => console.log("Show button clicked")}
               >
                 បង្ហាញ
               </button>
             </div>
-            <span className="text-[16px] text-gray-600 mt-4  font-suwannaphum lg:text-[17px] line-clamp-1 xl:text-[18px]">
+            <span className="text-[16px] text-gray-600 mt-4  font-suwannaphum lg:text-[17px] line-clamp-1 xl:text-[16px] xl:pt-2">
               អ្នកបង្កើត: {book.created_by}
             </span>
           </div>
