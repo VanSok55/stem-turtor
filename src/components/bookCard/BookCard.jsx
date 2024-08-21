@@ -15,8 +15,8 @@ import image7 from "../../../src/assets/stem_book_technology5.webp";
 import image8 from '../../../src/assets/stem_book_technology6.webp';
 import card1 from "../../../src/assets/Lesspn_STEM.jpg";
 import card2 from "../../../src/assets/IOS programming.jpg";
-import card3 from "../../../src/assets/Mathematic.jpg";
-import card4 from "../../../src/assets/Python crash course E.jpg";
+import card3 from "../../../src/assets/Python crash course E.jpg";
+import card4 from "../../../src/assets/Mathematic.jpg";
 AOS.init();
 const BookCard = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
