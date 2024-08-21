@@ -38,10 +38,10 @@ const FooterCard = () => {
                   col
                   className="text-[17px] font-medium font-suwannaphum text-white"
                 >
-                  <Footer.Link href="#">មេរៀន</Footer.Link>
-                  <Footer.Link href="#">ប្លុក</Footer.Link>
-                  <Footer.Link href="#">វេទិកា</Footer.Link>
-                  <Footer.Link href="#">វីដេអូ</Footer.Link>
+                  <Footer.Link href="/book">សៀវភៅ</Footer.Link>
+                  <Footer.Link href="/lesson">មេរៀន</Footer.Link>
+                  <Footer.Link href="/forum">វេទិកា</Footer.Link>
+                  <Footer.Link href="/blog">ប្លុក</Footer.Link>
                 </Footer.LinkGroup>
               </div>
               <div>
@@ -69,7 +69,7 @@ const FooterCard = () => {
                   className="text-[17px] font-medium font-suwannaphum text-white"
                 >
                   <Footer.Link href="#">អាសយដ្ធាន</Footer.Link>
-                  <Footer.Link href="#">ក្រុមការងារ</Footer.Link>
+                  <Footer.Link href="/about-Us">ក្រុមការងារ</Footer.Link>
                   <Footer.Link href="#">ផ្សេងៗ</Footer.Link>
                 </Footer.LinkGroup>
               </div>
