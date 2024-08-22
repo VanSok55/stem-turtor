@@ -12,6 +12,10 @@ import book5 from "../../../src/assets/stem_book_technology2.webp";
 import book6 from "../../../src/assets/stem_forum_technoligy3.webp";
 import book7 from "../../../src/assets/stem_book_technology5.webp";
 import book8 from "../../../src/assets/stem_book_technology6.webp";
+import bookcard1 from "../../../src/assets/Lesspn_STEM.jpg";
+import bookcard2 from "../../../src/assets/IOS programming.jpg";
+import bookcard3 from "../../../src/assets/Python crash course E.jpg";
+import bookcard4 from "../../../src/assets/Mathematic.jpg";
 import "aos/dist/aos.css";
 AOS.init();
 const BookCard = () => {
@@ -200,7 +204,7 @@ const BookCard = () => {
             <div className="relative h-full w-full overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg"
-                src="../src/assets/Lesspn_STEM.jpg"
+                src={bookcard1}
                 alt="Stem Book"
               />
               <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center p-3">
@@ -219,7 +223,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/IOS programming.jpg"
+                src={bookcard2}
                 alt=""
               />
             </div>
@@ -262,7 +266,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/Python crash course E.jpg"
+                src={bookcard3}
                 alt=""
               />
             </div>
@@ -306,7 +310,7 @@ const BookCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500 ease-linear"
-                src="../src/assets/Mathematic.jpg"
+                src={bookcard4}
                 alt=""
               />
             </div>

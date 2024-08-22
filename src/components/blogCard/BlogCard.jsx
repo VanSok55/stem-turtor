@@ -124,7 +124,7 @@ const BlogCard = () => {
       <div className="relative h-full w-full overflow-hidden">
         <img
           className="h-full w-full rounded-lg object-cover opacity-100 transition duration-300 ease-in-out transform scale-100"
-          src="../src/assets/Blog Part.jpg"
+          src={lesson1}
           alt="Stem Book"
         />
         <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
@@ -144,7 +144,7 @@ const BlogCard = () => {
       <div className="relative h-[250px] overflow-hidden">
         <img
           className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
-          src="../src/assets/C++ Programming.jpg"
+          src={lesson2}
           alt=""
         />
       </div>
@@ -189,7 +189,7 @@ const BlogCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/Introduct to .Net E.jpg"
+                src={lesson3}
                 alt=""
               />
             </div>
@@ -234,7 +234,7 @@ const BlogCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/.NET.jpg"
+                src={lesson4}
                 alt=""
               />
             </div>

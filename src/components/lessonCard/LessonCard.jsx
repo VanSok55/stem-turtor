@@ -13,8 +13,8 @@ import image6 from "../../../src/assets/frontend.jpg";
 import image7 from "../../../src/assets/Designing User Interfaces.jpg";
 import image8 from "../../../src/assets/Electronics E.jpg";
 
-import lesson1 from "../../../src/assets/Lesson.webp";
-import lesson2 from "../../../src/assets/Photoshop Basics.jpg";
+import lesson1 from "../../../src/assets/Photoshop Basics.jpg";
+import lesson2 from "../../../src/assets/Mathematic.jpg";
 import lesson3 from "../../../src/assets/Logic for kid E.jpg";
 import lesson4 from "../../../src/assets/The simple science activity E.jpg";
 
@@ -195,7 +195,7 @@ const LessonCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
-                src="../src/assets/Photoshop Basics.jpg"
+                src={lesson1}
                 alt=""
               />
             </div>
@@ -241,7 +241,7 @@ const LessonCard = () => {
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={lesson3}
+                src={lesson2}
                 alt=""
               />
             </div>
