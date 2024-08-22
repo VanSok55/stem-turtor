@@ -144,113 +144,95 @@ const BlogDetail = () => {
   };
 
   if (loading) {
-    return <div></div>;
+    return <div className="text-center">Loading...</div>;
   }
 
   if (!blog) {
-    return <div>Blog not found</div>;
+    return <div className="text-center">Blog not found</div>;
   }
 
   return (
     <>
-      <section className="w-[100%] mx-auto flex flex-col md:flex-row justify-between gap-8 p-8 font-suwannaphum ">
-        <div className="w-full h-full">
-          <h1 className="text-2xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}></h1>
-          <p className="mb-4 text-[18px]" dangerouslySetInnerHTML={{ __html: blog.content || "No title" }} ></p>
-          <div className="w-[60%] mx-auto flex justify-center">
-          <div>
-              <img
-                className="w-full object-cover rounded-lg"
-                src={
-                  blog.image
-                    ? blog.image.replace(
-                        /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
-                        "https://stem.automatex.dev/media/uploads/"
-                      )
-                    : "https://via.placeholder.com/150"
-                } // Fallback image if blog.image is null or undefined
-                alt={blog.title || "Image"}
-              />
-            </div>
-
+      <section className="w-full max-w-screen-xl mx-auto flex flex-col md:flex-row gap-8 p-8 font-suwannaphum">
+        {/* Blog Content Section */}
+        <div className="w-full md:w-2/3 flex flex-col">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: blog.title || "No title" }}></h1>
+          <p className="text-base md:text-lg lg:text-xl mb-4" dangerouslySetInnerHTML={{ __html: blog.content || "No content" }}></p>
+          <div className="w-full flex justify-center mb-4">
+            <img
+              className="w-full max-w-lg object-cover rounded-lg"
+              src={
+                blog.image
+                  ? blog.image.replace(
+                      /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                      "https://stem.automatex.dev/media/uploads/"
+                    )
+                  : "https://via.placeholder.com/600x400"
+              } // Fallback image if blog.image is null or undefined
+              alt={blog.title || "Blog Image"}
+            />
           </div>
         </div>
 
-        <div className="w-full md:w-[35%] flex flex-col gap-8">
-          {/* Profile Section */}
+        {/* Profile Section */}
+        <div className="w-full md:w-1/3 flex flex-col gap-8">
           <div className="w-full py-4 px-3 bg-gray-200 rounded-lg shadow-lg flex flex-col items-center">
-          <img
-            src={
-              blog.profileUser
-                ? blog.profileUser.replace(
-                    /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
-                    "https://stem.automatex.dev/media/uploads/"
-                  )
-                : "https://mastertondental.co.nz/wp-content/uploads/2022/12/team-profile-placeholder.jpg"
-            }
-            alt="Profile Image"
-            className="w-16 h-16 md:w-12 md:h-12 rounded-full"
-          />
-            <div className="ml-3 flex flex-col items-center text-center">
-              <div className="font-bold text-base md:text-sm mt-2">{`${blog.author}`}</div>
-              <div className="text-gray-400 text-sm md:text-xs mt-2">
-                @{blog.author}
-              </div>
-              <span className="mt-2">
-                {error && <p>Error: {error}</p>}
+            <img
+              src={
+                blog.profileUser
+                  ? blog.profileUser.replace(
+                      /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                      "https://stem.automatex.dev/media/uploads/"
+                    )
+                  : "https://mastertondental.co.nz/wp-content/uploads/2022/12/team-profile-placeholder.jpg"
+              }
+              alt="Profile Image"
+              className="w-24 h-24 md:w-20 md:h-20 rounded-full"
+            />
+            <div className="mt-3 text-center">
+              <div className="font-bold text-lg md:text-base">{blog.author || "Unknown Author"}</div>
+              <div className="text-gray-400 text-sm md:text-xs">@{blog.author || "username"}</div>
+              <p className="text-sm md:text-base mt-2">
+                {error && <span className="text-red-500">Error: {error}</span>}
                 {totalFollowers !== null && !loading && !error && (
-                  <p className="text-sm md:text-base">
-                    ចំនួនតាម : {totalFollowers}
-                  </p>
+                  <span>Followers: {totalFollowers}</span>
                 )}
-              </span>
-            </div>
-
-            <div
-              className={`flex items-center text-white space-x-2 py-2 px-4 md:px-8 lg:px-12 xl:px-16 rounded-xl cursor-pointer transition-all duration-300 mt-4 ${
-                isFollowing
-                  ? "bg-gray-400"
-                  : "bg-[#16a1df] hover:bg-[#246a8b] transform hover:scale-105"
-              }`}
-              onClick={handleFollowToggle}
-            >
-              <SlUserFollow className="text-base md:text-sm" />
-              <button className="text-sm md:text-base lg:text-lg">
-                {isFollowing ? "ឈប់តាម" : "តាមដាន"}
+              </p>
+              <button
+                className={`mt-4 py-2 px-4 rounded-xl transition-transform duration-300 ${
+                  isFollowing
+                    ? "bg-gray-400"
+                    : "bg-[#16a1df] hover:bg-[#246a8b] transform hover:scale-105"
+                } text-white`}
+                onClick={handleFollowToggle}
+              >
+                <SlUserFollow className="inline-block mr-2" />
+                {isFollowing ? "Unfollow" : "Follow"}
               </button>
             </div>
           </div>
 
           {/* Related Articles Section */}
           <div className="w-full p-4 bg-gray-200 rounded-lg">
+            <h2 className="font-bold text-lg md:text-base mb-4">Related Articles</h2>
             <ul>
-              <li className="font-bold text-lg md:text-base mb-4">
-                អត្ថបទដែលពាក់ព័ន្ធ
-              </li>
               {[...Array(4)].map((_, index) => (
-                <li key={index} className="flex items-center space-x-4">
-                  <div className="w-[80px] h-[80px] md:w-[60px] md:h-[60px] mt-3 cursor-pointer">
-                      <img
-                        src={
-                          blog.image
-                            ? blog.image.replace(
-                                /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
-                                "https://stem.automatex.dev/media/uploads/"
-                              )
-                            : "https://via.placeholder.com/150"
-                        } // Fallback image if blog.image is null or undefined
-                        alt={blog.title || "Related article image"} // Fallback alt text if blog.title is null or undefined
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-
+                <li key={index} className="flex items-center space-x-4 mb-4">
+                  <img
+                    src={
+                      blog.image
+                        ? blog.image.replace(
+                            /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                            "https://stem.automatex.dev/media/uploads/"
+                          )
+                        : "https://via.placeholder.com/80x80"
+                    }
+                    alt={`Related article ${index + 1}`}
+                    className="w-20 h-20 object-cover rounded-lg"
+                  />
                   <div>
-                    <p className="block title-truncate text-sm md:text-xs" dangerouslySetInnerHTML={{ __html: blog.title || "No related title" }}> 
-                    </p>
-                    <p className="text-gray-500 text-sm md:text-xs mt-2" >
-                      {moment(blog.created_at).format("MMMM DD, YYYY")}
-                    </p>
+                    <p className="text-sm md:text-xs font-semibold" dangerouslySetInnerHTML={{ __html: blog.title || "Related article" }}></p>
+                    <p className="text-xs text-gray-500 mt-1">Date</p>
                   </div>
                 </li>
               ))}
@@ -258,6 +240,18 @@ const BlogDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Display follow messages */}
+      {followError && (
+        <div className="fixed bottom-0 right-0 p-4 bg-red-500 text-white">
+          {followError}
+        </div>
+      )}
+      {followSuccessMessage && (
+        <div className="fixed bottom-0 right-0 p-4 bg-green-500 text-white">
+          {followSuccessMessage}
+        </div>
+      )}
     </>
   );
 };

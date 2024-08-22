@@ -62,7 +62,7 @@ const BlogCard = () => {
       views: 67,
     },
     {
-      imgSrc:image6,
+      imgSrc: image6,
       title: "ចំណុច​ខ្សោយ​ Microsoft",
       description:
         "ក្រុមហ៊ុន Microsoft ចេញ​ផ្សាយ​ចំណុច​ខ្សោយ​ធ្ងន់ធ្ងរ​បំផុត​ចំនួន ១០ ក្នុង​ចំណោម​ចំណុច​ខ្សោយ​ទាំងអស់​...",
@@ -104,69 +104,64 @@ const BlogCard = () => {
       nextSlide();
     }, 3000); // Slide every 3 seconds
 
-
     return () => clearInterval(autoSlide);
   }, []);
   return (
     <>
-      <section className="flex justify-between mt-5 w-[94%] mx-auto font-suwannaphum mb-7">
-        <h3 className="font-bold text-[#16A1DF] text-3xl">ប្លុក</h3>
+      <section className="flex justify-between mt-5 gap w-full mx-auto font-suwannaphum mb-10">
+        <h3 className="font-bold text-[#16A1DF] xl:text-[25px]">ប្លុក</h3>
         <Link to="/blog">
-          {" "}
-          <span className="flex items-center text-black text-[20px]">
+          <span className="flex items-center text-black xl:text-[25px]">
             បង្ហាញទាំងអស់
             <FaArrowRightLong />
           </span>
         </Link>
       </section>
-      <Link to="/blog">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto">
-          <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]" 
-             data-aos="fade-up"
-             data-aos-duration="1700">
-            <div className="relative h-full w-full overflow-hidden">
-              <img
-                className="h-full w-full rounded-lg object-cover opacity-100 transition duration-300 ease-in-out transform scale-100"
-                src={lesson1}
-                alt="Stem Book"
-              />
-              <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
-                <h2 className="text-black text-xl font-suwannaphum text-center font-bold">
-                  ចំណេះដឹងស្ដីពីវិទ្យាសាស្រ្តនិងបច្ចេកវិទ្យា
-                  <br />
-                  <span className="text-[18px]">
-                    រុករកកិច្ចការស្រាវជ្រាវស្តីពីវិទ្យាសាស្រ្តបច្ចេកវិទ្យា
-                  </span>
-                </h2>
-              </div>
-            </div>
-          </div>
 
-          {/* Card1 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
-             data-aos="fade-up"
-             data-aos-duration="1700">
-            <div className="relative h-[250px] overflow-hidden ">
-              <img
-                className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={lesson2}
-                alt=""
-              />
-            </div>
-            <div className="p-3 mb-4">
-              <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
-                C++ Programming
-              </h4>
-              <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
-                ស្វែងយល់ពីចំណុចសំខាន់នៃការសរសេរកម្មវិធី C++
-                ចាប់ពីគោលគំនិតជាមូលដ្ឋានរហូតដល់បច្ចេកទេស...
-              </span>
-            </div>
+<Link to="/blog">
+  <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full mx-auto px-2">
+    <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]">
+      <div className="relative h-full w-full overflow-hidden">
+        <img
+          className="h-full w-full rounded-lg object-cover opacity-100 transition duration-300 ease-in-out transform scale-100"
+          src="../src/assets/Blog Part.jpg"
+          alt="Stem Book"
+        />
+        <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+          <h2 className="text-black text-xl font-suwannaphum text-center font-bold">
+            ចំណេះដឹងស្ដីពីវិទ្យាសាស្រ្តនិងបច្ចេកវិទ្យា
+            <br />
+            <span className="text-[18px]">
+              រុករកកិច្ចការស្រាវជ្រាវស្តីពីវិទ្យាសាស្រ្តបច្ចេកវិទ្យា
+            </span>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    {/* Card1 */}
+    <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+      <div className="relative h-[250px] overflow-hidden">
+        <img
+          className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
+          src="../src/assets/C++ Programming.jpg"
+          alt=""
+        />
+      </div>
+      <div className="p-3 mb-4">
+        <h4 className="block font-suwannaphum text-lg sm:text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+          C++ Programming
+        </h4>
+        <span className="line-clamp-2 block font-suwannaphum mt-2 text-sm sm:text-base antialiased font-normal md:line-clamp-2 lg:line-clamp-2 xl:line-clamp-2 2xl:line-clamp-2 leading-relaxed text-gray-700">
+          ស្វែងយល់ពីចំណុចសំខាន់នៃការសរសេរកម្មវិធី C++
+          ចាប់ពីគោលគំនិតជាមូលដ្ឋានរហូតដល់បច្ចេកទេស...
+        </span>
+      </div>
 
 
-            <div className="border-t">
+      <div className="border-t">
               <div className="flex items-center justify-between p-3 mt-1">
-                <p className="font-suwannaphum text-md text-black ">
+                <p className="font-suwannaphum text-md text-black">
                   ចំនួនអ្នកមេីល: 100 នាក់
                 </p>
                 <div className="flex items-center text-md">
@@ -190,21 +185,19 @@ const BlogCard = () => {
             </div>
           </div>
           {/* Card2 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
-             data-aos="fade-up"
-             data-aos-duration="1700">
-            <div className="relative h-[250px] overflow-hidden ">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+            <div className="relative h-[250px] overflow-hidden">
               <img
-                className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={lesson3}
+                className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
+                src="../src/assets/Introduct to .Net E.jpg"
                 alt=""
               />
             </div>
             <div className="p-3 mb-4">
-              <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+              <h4 className="block font-suwannaphum text-lg sm:text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
                 Introduction to .NET Core
               </h4>
-              <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
+              <span className="line-clamp-2 block font-suwannaphum mt-2 text-sm sm:text-base antialiased font-normal md:line-clamp-2 lg:line-clamp-2 xl:line-clamp-2 2xl:line-clamp-2 leading-relaxed text-gray-700">
                 ស្វែងយល់អំពីចំណុចខ្លាំង និងករណីប្រើប្រាស់នៃក្របខ័ណ្ឌនីមួយៗ
                 និងរបៀបជ្រើសរើសមួយដែលត្រឹម...
               </span>
@@ -213,7 +206,7 @@ const BlogCard = () => {
 
             <div className="border-t">
               <div className="flex items-center justify-between p-3 mt-1">
-                <p className="font-suwannaphum text-md text-black ">
+                <p className="font-suwannaphum text-md text-black">
                   ចំនួនអ្នកមេីល: 56 នាក់
                 </p>
                 <div className="flex items-center text-md">
@@ -237,21 +230,19 @@ const BlogCard = () => {
             </div>
           </div>
           {/* Card3 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
-               data-aos="fade-up"
-               data-aos-duration="1700">
-            <div className="relative h-[250px] overflow-hidden ">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+            <div className="relative h-[250px] overflow-hidden">
               <img
-                className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
-                src={lesson4}
+                className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
+                src="../src/assets/.NET.jpg"
                 alt=""
               />
             </div>
-            <div className="p-3 mb-5">
-              <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+            <div className="p-3 mb-4">
+              <h4 className="block font-suwannaphum text-lg sm:text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
                 Desktop Applications .NET
               </h4>
-              <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
+              <span className="line-clamp-2 block font-suwannaphum mt-2 text-sm sm:text-base antialiased font-normal md:line-clamp-2 lg:line-clamp-2 xl:line-clamp-2 2xl:line-clamp-2 leading-relaxed text-gray-700">
                 ការណែនាំនេះគ្របដណ្តប់លើការអនុវត្តល្អបំផុត សមាសធាតុសំខាន់ៗ
                 និងការពិចារណាអំពីស្ថាបត្យកម្មសម្រាប់...
               </span>
@@ -259,10 +250,10 @@ const BlogCard = () => {
 
             <div className="border-t">
               <div className="flex items-center justify-between p-3 mt-1">
-                <p className="font-suwannaphum text-md text-black ">
-                  ចំនួនអ្នកមេីល: 27 នាក់
+                <p className="font-suwannaphum text-md text-black">
+                  ចំនួនអ្នកមេីល: 56 នាក់
                 </p>
-                <div className="flex items-center text-[15px] ">
+                <div className="flex items-center text-md">
                   {[...Array(5)].map((_, i) => (
                     <svg
                       key={i}
@@ -283,10 +274,12 @@ const BlogCard = () => {
             </div>
           </div>
         </section>
+
+
         {/* second section */}
         </Link>
       {/* slide bar */}
-      <section className="relative w-[95%] mx-auto overflow-hidden rounded-lg mb-5 gap-4 mt-5">
+      <section className="relative w-full mx-auto overflow-hidden rounded-lg mb-5 gap-4 px-2">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -295,23 +288,21 @@ const BlogCard = () => {
             <Link
               to="/blog"
               key={index}
-              className="flex-shrink-0 w-[96%] sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
+              className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
             >
-              <div className="border bg-white text-gray-700 shadow-md rounded-lg" 
-                   data-aos="fade-up"
-                   data-aos-duration="1700">
+              <div className="border bg-white text-gray-700 shadow-md rounded-lg">
                 <div className="relative h-[250px] overflow-hidden">
                   <img
-                    className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
+                    className="w-full h-[200px] xl:h-full xl:w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
                     src={book.imgSrc}
                     alt={book.title}
                   />
                 </div>
                 <div className="p-3">
-                  <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+                  <h4 className="line-clamp-1 text-[18px] -mt-12 md:text-[18px] lg:text-[19px] md:line-clamp-1 lg:line-clamp-1 block font-suwannaphum xl:text-xl xl:mt-4 font-semibold leading-snug tracking-normal text-blue-gray-900">
                     {book.title}
                   </h4>
-                  <span className="mt-2 h-[50px] block mb-5 font-suwannaphum text-l antialiased font-normal leading-relaxed text-gray-700">
+                  <span className="line-clamp-2 mt-2 text-[15px] xl:h-[50px] xl:mb-7 block mb-5 md:line-clamp-2 lg:line-clamp-2 xl:line-clamp-2 2xl:line-clamp-3 font-suwannaphum xl:text-lg antialiased font-normal leading-relaxed text-gray-900">
                     {book.description}
                   </span>
                 </div>
@@ -345,15 +336,15 @@ const BlogCard = () => {
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-black p-3 rounded-full hover:bg-gray-700 transition-colors"
+          className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-black p-1 xs:p-2 sm:p-3 md:p-4 lg:p-3 xl:p-4 rounded-full hover:bg-gray-700 transition-colors"
         >
-          <FaChevronLeft />
+          <FaChevronLeft className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white bg-black p-3 rounded-full hover:bg-gray-700 transition-colors"
+          className="absolute top-1/2 right-2 transform -translate-y-1/2 text-white bg-black p-1 xs:p-2 sm:p-3 md:p-3 lg:p-4 xl:p-4 rounded-full hover:bg-gray-700 transition-colors"
         >
-          <FaChevronRight />
+          <FaChevronRight className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-3 md:h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
         </button>
       </section>
     </>
