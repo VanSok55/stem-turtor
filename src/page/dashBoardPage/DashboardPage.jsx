@@ -172,7 +172,7 @@ const DashboardPage = () => {
                             <RiUserFollowFill className="h-7 w-7 text-blue-400" />
                             <div className="bg-green-500 rounded-full h-6 px-2 flex justify-items-center text-white font-semibold text-sm">
                               <span className="flex items-center">{percentages.books.toFixed(2)}%</span>
-                            </div>
+                            </div> 
                           </div>
                           <div className="ml-2 w-full flex-1">
                             <div>
