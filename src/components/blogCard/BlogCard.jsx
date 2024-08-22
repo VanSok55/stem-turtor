@@ -108,7 +108,7 @@ const BlogCard = () => {
   }, []);
   return (
     <>
-      <section className="flex justify-between mt-5 gap w-full mx-auto font-suwannaphum mb-10">
+      <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
         <h3 className="font-bold text-[#16A1DF] xl:text-[25px]">ប្លុក</h3>
         <Link to="/blog">
           <span className="flex items-center text-black xl:text-[25px]">
@@ -119,7 +119,7 @@ const BlogCard = () => {
       </section>
 
 <Link to="/blog">
-  <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full mx-auto px-2">
+  <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[94%] mx-auto px-2">
     <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]">
       <div className="relative h-full w-full overflow-hidden">
         <img
@@ -279,7 +279,7 @@ const BlogCard = () => {
         {/* second section */}
         </Link>
       {/* slide bar */}
-      <section className="relative w-full mx-auto overflow-hidden rounded-lg mb-5 gap-4 px-2">
+      <section className="relative w-[94%] mx-auto overflow-hidden rounded-lg mb-5 gap-4 px-2">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
