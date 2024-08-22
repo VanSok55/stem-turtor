@@ -114,7 +114,7 @@ const ForumCard = () => {
         </Link>
       </section>
       <Link to="/forum">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto mb-5">
           <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]">
             <div className="relative h-full w-full overflow-hidden">
               <img
