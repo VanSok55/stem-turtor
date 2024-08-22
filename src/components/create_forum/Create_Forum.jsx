@@ -173,10 +173,10 @@ const Create_Forum = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between py-2 border-t dark:border-gray-600">
+            <div className="flex items-center text-center justify-between py-2 border-t dark:border-gray-600">
               <button
                 type="submit"
-                className="inline-flex font-suwannaphum w-[100px] items-center py-2.5 px-4 text-md font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+                className="inline-flex font-suwannaphum w-[80px] items-center py-2.5 px-4  text-md font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
               >
                 បង្ហោះ
               </button>
