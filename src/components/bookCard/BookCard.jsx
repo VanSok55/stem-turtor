@@ -94,7 +94,7 @@ const BookCard = () => {
 
   return (
     <>
-      <section className="flex justify-between mt-5 gap w-[95%] mx-auto font-suwannaphum mb-10">
+      <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
         <span className="font-bold text-[#16A1DF] xl:text-[25px]">សៀវភៅ</span>
         <Link to="/book">
           <span className="flex items-center text-black xl:text-[25px]">
@@ -113,7 +113,7 @@ const BookCard = () => {
 
 
       {/* Slide bar */}
-      <section className="relative w-full sm:w-[96%] mx-auto overflow-hidden rounded-lg mb-5 gap-5">
+      <section className="relative w-full sm:w-[96%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}

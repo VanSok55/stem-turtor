@@ -105,9 +105,9 @@ const LessonCard = () => {
   }, []);
   return (
     <>
-      <section className="flex justify-between mt-5 gap w-[95%] mx-auto font-suwannaphum mb-10">
+      <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
         <span className="font-bold text-[#16A1DF] xl:text-[25px]">មេរៀន</span>
-        <Link to="/book">
+        <Link to="/lesson">
           <span className="flex items-center text-black xl:text-[25px]">
             បង្ហាញទាំងអស់
             <FaArrowRight />
