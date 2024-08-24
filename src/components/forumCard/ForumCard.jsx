@@ -104,7 +104,7 @@ const ForumCard = () => {
   }, []);
   return (
     <>
-      <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
+      <section className="flex justify-between mt-5 w-[90%] sm:w-[94%]  mx-auto font-suwannaphum mb-10">
         <span className="font-bold text-[#16A1DF] xl:text-[25px]">វេទិកា</span>
         <Link to="/forum">
           <span className="flex items-center text-black xl:text-[25px]">
@@ -114,7 +114,7 @@ const ForumCard = () => {
         </Link>
       </section>
       <Link to="/forum">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[95%] mx-auto mb-5">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[90%] mx-auto mb-5">
           <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]" 
               data-aos="fade-up"
               data-aos-duration="1500">
@@ -281,7 +281,7 @@ const ForumCard = () => {
         </section>
       </Link>
       <Link to="/forum">
-        <section className="relative w-full sm:w-[96%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
+        <section className="relative w-[94%] sm:w-[94%]  mx-auto overflow-hidden rounded-lg mb-5 gap-4">
           <div
             className="flex transition-transform ease-out duration-500"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}

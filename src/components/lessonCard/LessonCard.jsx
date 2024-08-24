@@ -105,7 +105,7 @@ const LessonCard = () => {
   }, []);
   return (
     <>
-      <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
+      <section className="flex justify-between mt-5 gap-4 w-[94%] mx-auto font-suwannaphum mb-10 px-3">
         <span className="font-bold text-[#16A1DF] xl:text-[25px]">មេរៀន</span>
         <Link to="/lesson">
           <span className="flex items-center text-black xl:text-[25px]">
@@ -117,7 +117,7 @@ const LessonCard = () => {
 
 
       {/* slide bar */}
-      <section className="relative w-full sm:w-[95%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
+      <section className="relative w-[94%] sm:w-[94%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
         <div
           className="flex transition-transform ease-out duration-500" 
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -191,7 +191,7 @@ const LessonCard = () => {
 
       {/* second section */}
       <Link to="/lesson">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full sm:w-[94%] mx-auto">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[91%] sm:w-[94%]   mx-auto">
           {/* Card1 */}
           <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
                data-aos="fade-up"

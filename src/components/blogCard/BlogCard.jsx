@@ -108,20 +108,16 @@ const BlogCard = () => {
   }, []);
   return (
     <>
-     <section className="flex justify-between mt-5 gap w-[94%] mx-auto font-suwannaphum mb-10">
-  <span className="font-bold text-[#16A1DF] text-[18px] sm:text-[20px] xl:text-[25px]">
-    ប្លុក
-  </span>
-  <Link to="/blog">
-    <span className="flex items-center text-black text-[18px] sm:text-[20px] xl:text-[25px]">
-      បង្ហាញទាំងអស់
-      <FaArrowRightLong />
-    </span>
-  </Link>
-</section>
-
-
-<Link to="/blog">
+    <section className="flex justify-between mt-5 gap-4 w-[94%] mx-auto font-suwannaphum mb-10 px-3">
+        <span className="font-bold text-[#16A1DF] xl:text-[25px]">ប្លុក</span>
+        <Link to="/blog">
+          <span className="flex items-center text-black xl:text-[25px]">
+            បង្ហាញទាំងអស់
+            <FaArrowRightLong />
+          </span>
+        </Link>
+      </section>
+      <Link to="/blog">
   <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-[94%] mx-auto px-2">
     <div className="border rounded-lg bg-white text-gray-700 shadow-sm h-[430px]" 
         data-aos="fade-up"
