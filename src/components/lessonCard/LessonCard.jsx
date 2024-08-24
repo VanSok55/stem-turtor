@@ -39,7 +39,7 @@ const LessonCard = () => {
     },
     {
       imgSrc:image3,
-      title: "Transforming Ideas into Visual",
+      title: "Transforming Ideas into..",
       description:
         "យល់ពីរបៀបបង្វែរគំនិតទៅជាការរចនាដែលគួរអោយទាក់ទាញ បង្ហាញពីបច្ចេកទេសសម្រាប់ការបង្ហាញនិង...",
       views: 24,
@@ -209,7 +209,7 @@ const LessonCard = () => {
               </h4>
               <span className="h-[50px] block font-suwannaphum mt-2 text-l leading-relaxed text-gray-700">
                 ចាប់ផ្តើមជាមួយ Adobe Photoshop ដោយសិក្សាឧបករណ៍
-                និងបច្ចេកទេសជាមូលដ្ឋានសម្រាប់កែ...
+                និងបច្ចេកទេសជាមូលដ្ឋាន...
               </span>
             </div>
 
@@ -256,7 +256,7 @@ const LessonCard = () => {
                 ការប្ដូរពណ៌ថតឯកសារនៅក្នុងកុំព្យូទ័រ
               </h4>
               <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
-              ក្នុងវីដេអូនេះ នឹងនាំអ្នកទាំងអស់គ្នាទៅផ្លាស់ប្ដូរបរិយាកាសនៃការប្រើប្រាស់កុំព្យូទ័រឱ្យកាន់តែមានភាពទាក់ទាញ 
+              ក្នុងវីដេអូនេះ នឹងនាំអ្នកទាំងអស់គ្នាទៅផ្លាស់ប្ដូរបរិយាកាសនៃការប្រើប្រាស់កុំព្យូទ័រឱ្យកាន់តែមានភាព
               </span>
             </div>
 
@@ -302,8 +302,7 @@ const LessonCard = () => {
                 Ask A Scientist
               </h4>
               <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
-                នៅក្នុងសៀវភៅវិទ្យាសាស្ត្រដ៏ពិសេសនេះសាស្ត្រាចារ្យ Robert Winston
-                ឆ្លើយសំណួរជីវិតពិតជាង100ពី...
+                នៅក្នុងសៀវភៅវិទ្យាសាស្ត្រដ៏ពិសេសនេះសាស្ត្រាចារ្យ Robert Winston...
               </span>
             </div>
 
@@ -349,7 +348,7 @@ const LessonCard = () => {
               </h4>
               <span className="h-[50px] block font-suwannaphum mt-2 text-l] antialiased font-normal leading-relaxed text-gray-700">
                 ក្មេងតូចៗនឹងក្លាយជាអ្នកវិទ្យាសាស្ត្រតូចៗ នៅពេលដែលពួកគេរុករក
-                ពិសោធន៍ បង្កើត និងបង្កើតផ្លូវរបស់ពួកគេ...
+                ពិសោធន៍ បង្កើត...
               </span>
             </div>
 

@@ -37,7 +37,7 @@ const ForumCard = () => {
     },
     {
       imgSrc: image3,
-      title: "Designing with Photoshop",
+      title: "Designing",
       description:
         "Photoshop សម្រាប់ការរចនាក្រាហ្វិក រួមទាំងការបង្កើតរូបភាពដ៏អស្ចារ្យ និងក្រាហ្វិកប្រកបដោយប្រសិទ្ធ...",
       views: 24,
@@ -72,7 +72,7 @@ const ForumCard = () => {
     },
     {
       imgSrc: image8,
-      title: "Creating Compelling Video ",
+      title: "Creating Compelling ",
       description:
         "ស្វែងយល់ពីរបៀបបង្កើតរឿងគួរឱ្យទាក់ទាញអារម្មណ៍ រៀបចំផែនការធាតុរូបភាព សំឡេង និងប្រើប្រាស់ឧប...",
       views: 9,
@@ -153,8 +153,7 @@ const ForumCard = () => {
                 Chemistry of Products
               </h4>
               <span className="line-clamp-2 block font-suwannaphum mt-2 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed text-gray-700">
-                ស្វែងយល់ពីរបកគំហើញចុងក្រោយបំផុតនៅក្នុងគីមីវិទ្យាសរីរាង្គ
-                រួមទាំងវិធីសាស្ត្រសំយោគថ្មី និងកម្មវិធីនៅក្នុង...
+                ស្វែងយល់ពីរបកគំហើញចុងក្រោយបំផុតនៅក្នុងគីមីវិទ្យាសរីរាង្គ...
               </span>
             </div>
 
@@ -201,7 +200,7 @@ const ForumCard = () => {
               </h4>
               <span className="line-clamp-2 block font-suwannaphum mt-2 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed text-gray-700">
                 ស្វែងយល់ពីវិធីសាស្ត្រផ្សេងៗចំពោះដំណើរការទិន្នន័យធំ
-                រួមទាំងដំណើរការជាបាច់ និងដំណើរការស្ទ្រីមតាមពេ...
+                រួមទាំងដំណើរការជាបាច់...
               </span>
             </div>
 
@@ -247,8 +246,7 @@ const ForumCard = () => {
                 Machine Learning
               </h4>
               <span className="line-clamp-2 block font-suwannaphum mt-2 text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] leading-relaxed text-gray-700">
-                Big Data with Machine Learning ស្វែងយល់ពីរបៀបដែល Big Data
-                ជួយបង្កើន model ដោយ...
+                Big Data with Machine Learning ស្វែងយល់ពីរបៀបដែល Big Data...
               </span>
             </div>
 

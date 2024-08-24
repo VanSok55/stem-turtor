@@ -3,18 +3,18 @@ import { Link, useParams } from "react-router-dom";
 import { fetchBookById } from "../../services/fetchBookById";
 import { Worker } from "@react-pdf-viewer/core";
 import { Viewer } from "@react-pdf-viewer/core";
-import book1 from "../../assets/book1.pdf";
 import "@react-pdf-viewer/core/lib/styles/index.css";
 import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
 import bookdetail from "../../../src/assets/BookDetail-removebg-preview.png";
-// Import styles
 import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 import { AUTH_HEADER } from "../../services/constants";
+
 const BookDetail = () => {
   const { id } = useParams();
   const bookId = decodeURIComponent(id);
   const [book, setBook] = useState(null);
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
   useEffect(() => {
     const fetchBookData = async () => {
       try {
@@ -25,9 +25,8 @@ const BookDetail = () => {
       }
     };
     fetchBookData();
-  }, []);
+  }, [bookId]);
 
-  //
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
@@ -51,11 +50,8 @@ const BookDetail = () => {
 
     fetchProfile();
   }, []);
-  if (!profile) {
-    return <div>Loading...</div>;
-  }
-  //
-  if (!book) {
+
+  if (!profile || !book) {
     return <div>Loading...</div>;
   }
 
@@ -95,10 +91,10 @@ const BookDetail = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-[35%] flex flex-col gap-8 ">
-        {/*  */}
-        <div className="w-full p-4 bg-gray-200 rounded-lg shadow-sm flex items-center gap-4 sticky top-28   ">
-        <img
+      <div className="w-full md:w-[35%] flex flex-col gap-8">
+        {/* Profile Section */}
+        <div className="w-full p-4 bg-gray-200 rounded-lg shadow-sm flex flex-col sm:flex-row items-start sm:items-center gap-4 sticky top-28">
+          <img
             src={
               profile.image
                 ? profile.image.replace(
@@ -108,15 +104,27 @@ const BookDetail = () => {
                 : "https://via.placeholder.com/150"
             }
             alt="Profile"
-            className="w-16 h-16 rounded-full object-cover" // Example styling
+            className="w-16 h-16 rounded-full object-cover"
           />
           <div className="ml-3 flex flex-col items-start">
-            <div className="font-bold text-sm mt-2">{`${book.created_by}`}</div>
+            <div className="font-bold text-sm mt-2 sm:mt-0">{`${book.created_by}`}</div>
             <div className="text-gray-400 text-xs mt-2">@{book.created_by}</div>
           </div>
           <button
             type="button"
-            className="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex mt-0 font-suwannaphum ml-56"
+            className="px-4 py-3 bg-blue-600 rounded-md text-white outline-none focus:ring-4 shadow-lg transform active:scale-x-75 transition-transform mx-5 flex mt-2 sm:mt-0 font-suwannaphum sm:ml-auto"
+            onClick={() => {
+              // Handle download without causing a page refresh
+              const downloadLink = document.createElement("a");
+              downloadLink.href = content.file.replace(
+                /^http:\/\/136.228.158.126:50001\/media\/uploads\//,
+                "https://stem.automatex.dev/media/uploads/"
+              );
+              downloadLink.setAttribute("download", "book.pdf");
+              document.body.appendChild(downloadLink);
+              downloadLink.click();
+              document.body.removeChild(downloadLink);
+            }}
           >
             <svg
               className="h-6 w-6"
@@ -125,19 +133,19 @@ const BookDetail = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
               />
             </svg>
-
             <span className="ml-2">ទាញយក</span>
           </button>
         </div>
-        {/*  */}
-        <div className="w-full p-4 bg-gray-200 rounded-lg ">
-          <ul className="space-y-2 ">
+
+        {/* Book Details Section */}
+        <div className="w-full p-4 bg-gray-200 rounded-lg">
+          <ul className="space-y-2">
             <li className="flex justify-between">
               <span>ប្រភេទសៀវភៅ</span>
               <span>{book.course_name}</span>
@@ -157,7 +165,8 @@ const BookDetail = () => {
           </ul>
         </div>
 
-        <div className="w-full p-4 bg-gray-200 rounded-lg sticky top-52">
+        {/* Related Articles Section */}
+        <div className="w-full p-4 bg-gray-200 rounded-lg">
           <ul>
             <li className="font-bold mb-4">អត្ថបទដែលពាក់ព័ន្ធ</li>
             {[...Array(4)].map((_, index) => (
