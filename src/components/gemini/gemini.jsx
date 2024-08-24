@@ -188,7 +188,7 @@ function GeminiChat({ language, handleLanguageChange, onClose }) {
         
         {/* Messages */}
         <img
-          className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] object-cover rounded-full"
+          className="w-[15px] h-[15px] md:w-[60px] md:h-[60px] object-cover rounded-full"
           src={dashboard}
           alt="STEM Logo"
         />
