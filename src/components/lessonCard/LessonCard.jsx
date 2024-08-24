@@ -14,7 +14,7 @@ import image7 from "../../../src/assets/Designing User Interfaces.jpg";
 import image8 from "../../../src/assets/Electronics E.jpg";
 
 import lesson1 from "../../../src/assets/Photoshop Basics.jpg";
-import lesson2 from "../../../src/assets/Lesson.webp";
+import lesson2 from "../../../src/assets/stem_lesson.webp";
 import lesson3 from "../../../src/assets/Logic for kid E.jpg";
 import lesson4 from "../../../src/assets/The simple science activity E.jpg";
 
@@ -119,7 +119,7 @@ const LessonCard = () => {
       {/* slide bar */}
       <section className="relative w-full sm:w-[95%] mx-auto overflow-hidden rounded-lg mb-5 gap-4">
         <div
-          className="flex transition-transform ease-out duration-500"
+          className="flex transition-transform ease-out duration-500" 
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {lessons.map((book, index) => (
@@ -128,7 +128,9 @@ const LessonCard = () => {
               key={index}
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
             >
-              <div className="border bg-white text-gray-700 shadow-md rounded-lg">
+              <div className="border bg-white text-gray-700 shadow-md rounded-lg" 
+                  data-aos="fade-up"
+                  data-aos-duration="1500">
                 <div className="relative h-[250px] overflow-hidden">
                   <img
                     className="w-full h-[200px] sm:h-full xl:w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -191,7 +193,9 @@ const LessonCard = () => {
       <Link to="/lesson">
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 w-full sm:w-[94%] mx-auto">
           {/* Card1 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+               data-aos="fade-up"
+               data-aos-duration="1500">
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -236,28 +240,56 @@ const LessonCard = () => {
           </div>
           
           {/* Card1 */}
-          <div className="border rounded-lg bg-white text-gray-700 shadow-sm ">
-            <div className="relative h-full w-full overflow-hidden">
+          
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+                 data-aos="fade-up"
+                 data-aos-duration="1500">
+            <div className="relative h-[250px] overflow-hidden">
               <img
-                className="h-full w-full object-cover opacity-100 transition duration-300 ease-in-out transform scale-100 rounded-t-lg "
+                className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
                 src={lesson2}
-                alt="Stem Book"
+                alt=""
               />
-              <div className="absolute inset-0 font-suwannaphum bg-transparent hover:bg-slate-300 opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out flex items-center justify-center">
-                <h2 className="text-black text-[25px] font-suwannaphum text-center font-bold">
-                  ការសិក្សាវីដេអូដែលទាក់ទងនឹង STEM
-                  <br />
-                  <span className="text-[18px]">
-                    ស្វែងរកវីដេអូផ្សេងៗដែលទាក់ទងនឹង Technology
-                  </span>
-                </h2>
+            </div>
+            <div className="p-3 mb-4">
+              <h4 className="block font-suwannaphum text-xl font-bold leading-snug tracking-normal text-blue-gray-900">
+                ការប្ដូរពណ៌ថតឯកសារនៅក្នុងកុំព្យូទ័រ
+              </h4>
+              <span className="h-[50px] block font-suwannaphum mt-2 text-l antialiased font-normal leading-relaxed text-gray-700">
+              ក្នុងវីដេអូនេះ នឹងនាំអ្នកទាំងអស់គ្នាទៅផ្លាស់ប្ដូរបរិយាកាសនៃការប្រើប្រាស់កុំព្យូទ័រឱ្យកាន់តែមានភាពទាក់ទាញ 
+              </span>
+            </div>
+
+            <div className="border-t">
+              <div className="flex items-center justify-between p-3 mt-1">
+                <p className="font-suwannaphum text-md text-black ">
+                  ចំនួនអ្នកមេីល: 56 នាក់
+                </p>
+                <div className="flex items-center text-md">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-3 h-3 text-yellow-400 text-md"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-
           {/* Card2 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+               data-aos="fade-up"
+               data-aos-duration="1500">
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
@@ -301,7 +333,9 @@ const LessonCard = () => {
             </div>
           </div>
           {/* Card3 */}
-          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]">
+          <div className="border rounded-xl bg-white text-gray-700 shadow-md h-[430px]" 
+               data-aos="fade-up"
+               data-aos-duration="1500">
             <div className="relative h-[250px] overflow-hidden">
               <img
                 className="h-full w-full object-cover rounded-t-md  hover:scale-105 transition-transform duration-500 ease-in-out"
