@@ -28,8 +28,8 @@ const FooterCard = () => {
               </span>
             </div>
 
-            <div className="mt-5 grid gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6 ">
-              <div>
+            <div className="mt-5 grid gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+              <div className="sm:mr-[6px]">
                 <Footer.Title
                   title="គេហទំព័រ"
                   className="font-suwannaphum text-[17px] font-semibold text-white ml-4"
@@ -44,7 +44,7 @@ const FooterCard = () => {
                   <Footer.Link href="/blog">ប្លុក</Footer.Link>
                 </Footer.LinkGroup>
               </div>
-              <div>
+              <div className="sm:mr-[6px]">
                 <Footer.Title
                   title="ព័ត៌មាន"
                   className="font-suwannaphum text-[17px] font-semibold text-white ml-4"
@@ -59,7 +59,7 @@ const FooterCard = () => {
                   <Footer.Link href="#">ដោះស្រាយបញ្ហា</Footer.Link>
                 </Footer.LinkGroup>
               </div>
-              <div>
+              <div className="sm:mr-[6px]">
                 <Footer.Title
                   title="ទំនាក់ទំនងមកពួកយើង"
                   className="font-suwannaphum text-[17px] font-semibold text-white ml-4"
@@ -74,6 +74,7 @@ const FooterCard = () => {
                 </Footer.LinkGroup>
               </div>
             </div>
+
           </div>
           <Footer.Divider />
           <div className="w-full sm:flex sm:items-center sm:justify-between text-white">
