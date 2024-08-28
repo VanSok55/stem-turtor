@@ -134,6 +134,7 @@ const BookCard = () => {
             <Link
               to="/book"
               key={index}
+              
               className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-2"
             >
               <div className="border bg-white text-gray-700 shadow-md rounded-lg" 
